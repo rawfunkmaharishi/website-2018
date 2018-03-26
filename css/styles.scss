@@ -14,6 +14,10 @@ h1 {
   font-family: $font-primary;
 }
 
+.container {
+  position: relative;
+}
+
 #main-nav {
   text-align: right;
   position: absolute;
@@ -26,4 +30,17 @@ h1 {
     padding: 0;
     margin: 0;
   }
+}
+
+#big-logo {
+  svg {
+    padding-top: $padding * 3;
+    display: block;
+    margin: auto;
+    width: 60%;
+  }
+}
+
+#mobile-padding {
+  height: 200px;
 }
