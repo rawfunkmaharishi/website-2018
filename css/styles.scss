@@ -17,10 +17,6 @@ h1 {
   font-family: $font-primary;
 }
 
-.container {
-  position: relative;
-}
-
 #main-nav {
   text-align: right;
   position: absolute;
@@ -41,8 +37,11 @@ h1 {
   }
 }
 
+// https://stackoverflow.com/questions/39420338/vertical-center-svg-in-div-container/39420535 ?
 #big-logo {
-  svg {
+  height: 100%;
+
+  svg#logo {
     padding-top: $padding * 3;
     display: block;
     margin: auto;
