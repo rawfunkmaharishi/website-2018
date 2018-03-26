@@ -2,8 +2,14 @@
   {% for link in site.data.links %}
     <li class='list-inline-item'>
       <a href='{{ link.url }}' title='{{ link.title }}'>
-        <i class='fab {{ link.fontawesome }}'></i><span class='d-none d-sm-inline'> {{ link.title }}</span>
+        <i class='fab {{ link.fontawesome }}' data-toggle='tooltip' title='{{ link.title }}'></i>
       </a>
     </li>
   {% endfor %}
 </ul>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
