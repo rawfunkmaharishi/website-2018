@@ -18,7 +18,8 @@ body {
 
   font-size: 0.7em;
 
-  background: map-get($theme-colors, primary);
+  // background-color: darken(white, 50%);
+  // opacity: $opacity;
   color: white;
   height: $footer-height;
 
@@ -28,10 +29,11 @@ body {
 
   a {
     color: white;
+    opacity: $opacity;
   }
 
   a:hover {
-    color: darken(white, 20%);
+    opacity: $opacity * 2;
     text-decoration: none;
   }
 }
