@@ -1,0 +1,21 @@
+js:
+  - name: jquery
+    url:  //code.jquery.com/jquery-3.3.1.min.js
+    hash: sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=
+  - name: popper
+    url:  //cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+    hash: sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q
+  - name: bootstrap
+    url:  //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
+    hash: sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl
+  - name: fontawesome
+    url:  //use.fontawesome.com/releases/v5.0.8/js/all.js
+    hash: sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ
+
+css:
+  - name: foo
+    bar:  //bar.com/baz.css
+
+fonts:
+  - name: ubuntu
+    url:  //fonts.googleapis.com/css?family=Montserrat

@@ -1,0 +1,29 @@
+---
+---
+@import 'variables';
+@import 'colours';
+@import 'fonts';
+
+@import 'bootstrap';
+
+@import 'footer';
+//@import 'github-corner';
+
+h1 {
+  color: map-get($theme-colors, primary);
+  font-family: $font-primary;
+}
+
+#main-nav {
+  text-align: right;
+  position: absolute;
+  top: $padding;
+  right: $padding;
+
+  text-transform: uppercase;
+
+  li > a {
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,35 @@
+- title:       Twitter
+  url:         https://twitter.com/uncookedfunk
+  fontawesome: fa-twitter
+
+- title:       Facebook
+  url:         https://facebook.com/rawfunkmaharishi
+  fontawesome: fa-facebook-square
+
+- title:       Soundcloud
+  url:         https://soundcloud.com/rawfunkmaharishi
+  fontawesome: fa-soundcloud
+
+- title:       Vimeo
+  url:         https://vimeo.com/rawfunkmaharishi
+  fontawesome: fa-vimeo-square
+
+- title:       Flickr
+  url:         http://flickr.com/photos/rawfunkmaharishi/
+  fontawesome: fa-flickr
+
+- title:       Github
+  url:         https://github.com/rawfunkmaharishi/
+  fontawesome: fa-github
+
+#- title:       Snapchat
+#  url:         /snapchat
+#  fontawesome: fa-comment
+
+# - title:       Data API
+#   url:         http://data.rawfunkmaharishi.uk/
+#   fontawesome: fa-database
+#
+# - title:       Developer blog
+#   url:         /blog/
+#   fontawesome: fa-code
