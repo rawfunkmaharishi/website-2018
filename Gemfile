@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.5.0'
+ruby File.read('.ruby-version').strip
 gem 'github-pages'
 gem 'rake'
-
