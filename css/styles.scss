@@ -84,3 +84,21 @@ svg.logo {
     fill: white;
   }
 }
+
+.photo {
+  position: relative;
+  padding: $padding;
+}
+
+.musician-name {
+  font-size: 4em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: $padding;
+  text-transform: uppercase;
+  opacity: $opacity * 2;
+  text-shadow: 0px 0px 4px black;
+}
