@@ -6,4 +6,4 @@ defaults:
     layout: default
 permalink: pretty
 
-baseurl: /test
+#baseurl: /test
