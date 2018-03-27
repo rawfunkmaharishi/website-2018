@@ -5,5 +5,3 @@ defaults:
   values:
     layout: default
 permalink: pretty
-
-#baseurl: /test
