@@ -1,9 +1,13 @@
 <div class='header'>
   {% include nav.html %}
   <div class='d-block d-sm-none' id='mobile-logo'>
-    {% include assets/logos/square.svg %}
+    <a href='{{ site.baseurl }}'>
+      {% include assets/logos/square.svg %}
+    </a>
   </div>
   <div class='d-none d-sm-block' id='main-logo'>
-    {% include assets/logos/wide.svg %}
+    <a href='{{ site.baseurl }}'>
+      {% include assets/logos/wide.svg %}
+    </a>
   </div>
 </div>

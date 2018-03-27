@@ -1,4 +1,22 @@
 ---
+title: The Band
 ---
 
-<h1>wat</h1>
+<div class="row">
+  {% for musician in site.data.band %}
+  <div class="col-sm">
+    <img
+      src='{{ site.baseurl }}/assets/images/the-band/{{ musician.image }}'
+      class='rounded mx-auto d-block'
+    />
+    <h2>{{ musician.name }}</h2>
+    {% if musician.twitter %}
+      <!-- <span class='twitter'>
+        <a href='https://twitter.com/{{ musician.twitter }}'
+           alt='{{ musician.title }} on Twitter'
+           title='{{ musician.title }} on Twitter'>@{{ musician.twitter }}</a>
+      </span> -->
+      {% endif %}
+  </div>
+  {% endfor %}
+</div>

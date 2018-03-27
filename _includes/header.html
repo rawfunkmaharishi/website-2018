@@ -9,6 +9,11 @@
 
   <link rel='icon' type='image/png' href='{{ site.baseurl }}/assets/favicon.ico' />
   <link rel='stylesheet' href='{{ site.baseurl }}/css/styles.css' />
+
+  {% if include.special_css %}
+    <link rel='stylesheet' href='{{ site.baseurl }}/css/{{ include.special_css }}' />
+  {% endif %}
+
   <script src='{{ site.baseurl }}/js/test.js'></script>
   <title>
   {{ page.title }}

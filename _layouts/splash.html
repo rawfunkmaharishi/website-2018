@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
-  {% include header.html %}
-  <body style='background-image: url({{ site.baseurl }}/assets/backgrounds/clouds-red.jpg)'>
+  {% include header.html special_css = 'splash.css' %}
+  <body style='background-image: url({{ site.baseurl }}/assets/backgrounds/clouds-red.jpg); height: 100%'>
     {% include nav.html %}
     <div class='container' id='splash-container'>
       {{ content }}

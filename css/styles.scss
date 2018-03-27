@@ -8,13 +8,25 @@
 
 @import 'footer';
 
-body {
-  margin-bottom: 0;
+h1, h2, h3 {
+  text-align: center;
+  color: $dark-grey;
+  font-family: $font-primary;
+  padding: $padding;
 }
 
 h1 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+a {
   color: map-get($theme-colors, primary);
-  font-family: $font-primary;
+}
+
+a:hover {
+  text-decoration: none;
+  color: darken(map-get($theme-colors, primary), 25%);
 }
 
 #main-nav {
@@ -35,10 +47,6 @@ h1 {
   li > a:hover {
     opacity: $opacity * 2;
   }
-}
-
-html, body, #splash-container {
-  height: 100%;
 }
 
 #big-logo {
