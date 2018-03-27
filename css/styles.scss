@@ -95,7 +95,7 @@ svg.logo {
   margin: $padding;
 }
 
-.musician-name {
+.musician-name, .picture-caption {
   font-size: 4em;
   position: absolute;
   bottom: 0;
@@ -106,4 +106,8 @@ svg.logo {
   text-transform: uppercase;
   opacity: $opacity * 2;
   text-shadow: 0px 0px 4px black;
+}
+
+.picture-caption {
+  font-size: 1em;
 }
