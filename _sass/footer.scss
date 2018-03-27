@@ -3,14 +3,12 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: $footer-height;
-}
-
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+
+  background-image: url(../assets/backgrounds/clouds-red.jpg);
 
   margin: 0;
 
@@ -33,5 +31,11 @@ body {
   a:hover {
     opacity: $opacity * 2;
     text-decoration: none;
+  }
+}
+
+#splash-footer {
+  .footer {
+    background: none;
   }
 }

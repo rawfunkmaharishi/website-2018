@@ -9,7 +9,6 @@
 @import 'footer';
 
 body {
-  background-image: url(../assets/backgrounds/clouds-red.jpg);
   margin-bottom: 0;
 }
 
@@ -38,7 +37,7 @@ h1 {
   }
 }
 
-html, body, .container {
+html, body, #splash-container {
   height: 100%;
 }
 
@@ -46,21 +45,34 @@ html, body, .container {
   height: 100%;
   display: flex;
 
-  svg#logo {
+  svg.logo {
     display: block;
     margin: auto;
     width: 60%;
-    path {
-      opacity: $opacity;
-      fill: white;
-    }
   }
-}
-
-#mobile-padding {
-  height: 200px;
 }
 
 .tooltip-inner {
   font-size: 0.8em;
+}
+
+.header {
+  background: url(../assets/backgrounds/clouds-red.jpg);
+  height: $banner-height;
+
+  #mobile-logo, #main-logo {
+    svg.logo {
+      display: block;
+      height: $banner-height * 0.9;
+      padding-top: $padding;
+      padding-left: $padding;
+    }
+  }
+}
+
+svg.logo {
+  path {
+    opacity: $opacity;
+    fill: white;
+  }
 }
