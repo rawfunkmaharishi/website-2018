@@ -10,6 +10,7 @@
 
 body {
   background-image: url(../assets/backgrounds/clouds-red.jpg);
+  margin-bottom: 0;
 }
 
 h1 {
@@ -37,12 +38,15 @@ h1 {
   }
 }
 
-// https://stackoverflow.com/questions/39420338/vertical-center-svg-in-div-container/39420535 ?
+html, body, .container {
+  height: 100%;
+}
+
 #big-logo {
   height: 100%;
+  display: flex;
 
   svg#logo {
-    padding-top: $padding * 3;
     display: block;
     margin: auto;
     width: 60%;
