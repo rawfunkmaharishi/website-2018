@@ -84,6 +84,10 @@ svg.logo {
     opacity: $opacity;
     fill: white;
   }
+
+  path:hover {
+    opacity: $opacity * 0.5;
+  }
 }
 
 .photo {
