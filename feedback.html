@@ -2,13 +2,20 @@
 title: What people are saying about us
 ---
 
-<dl class='reviews'>
+<div class='row'>
 {% for review in site.data.reviews reversed %}
-  <dt>
-    '{{ review.quote }}'
-  </dt>
-  <dd>
-    -- {{ review.source }}
-  </dd>
+  <div class='card review col-md'>
+    <div class='card-body'>
+      <blockquote class='blockquote mb-0'>
+        <p>'{{ review.quote }}'</p>
+        <footer class='blockquote-footer'>{{ review.source }}</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  {% capture breakpoint %}{{ forloop.index0 | modulo: 2}}{% endcapture %}
+  {% if breakpoint == '1' %}
+    </div><div class='row'>
+  {% endif %}
 {% endfor %}
-</dl>
+</div>

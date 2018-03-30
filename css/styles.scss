@@ -187,3 +187,24 @@ dt {
     border: none;
   }
 }
+
+.review {
+  margin: $padding;
+}
+
+.merch-logo {
+  background-color: map-get($theme-colors, primary);
+  padding: $padding;
+  margin: $padding;
+}
+
+.btn-info, .btn-warning  {
+  background-color: map-get($theme-colors, primary);
+  border: 0;
+  color: white;
+}
+
+.btn-info:hover, .btn-warning:hover  {
+  background-color: darken(map-get($theme-colors, primary), 10%);
+  color: $light-grey;
+}
