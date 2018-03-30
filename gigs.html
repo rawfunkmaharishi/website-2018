@@ -1,0 +1,53 @@
+---
+title: Gigs
+---
+
+<h2>Upcoming</h2>
+<dl id='giglist' class='row'></dl>
+
+<h2>Archive</h2>
+<dl id='archive' class='row'></dl>
+
+<script>
+gigs = [
+  {% for gig in site.categories.gigs %}
+  {
+    'title': '{{ gig.title }}',
+    'date': '{{ gig.date | date: "%Y-%m-%d" }}',
+    'url': '{{ gig.url }}'
+  },
+  {% endfor %}
+]
+
+nothingPlanned = true
+$.each(gigs, function(index, gig) {
+  date = fancyDate(gig.date)
+
+  dt = '<dt class="col-6">' + date + '</dt>'
+  dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
+
+  target = '#archive'
+  if (isFuture(gig.date)) {
+    nothingPlanned = false
+    target = '#giglist'
+  }
+
+  $(target).append(dt + dd)
+})
+
+if (nothingPlanned) {
+  $('<p class="text-center">Nothing in the calendar. Why not <a href="/book-the-band/">book us?</a></p>').insertBefore('#giglist')
+}
+
+function fancyDate(isoDate) {
+  format = 'Do MMMM YYYY'
+  if (isFuture(isoDate)) {
+    format = 'dddd Do MMMM'
+  }
+  return moment(isoDate).format(format)
+}
+
+function isFuture(date) {
+  return moment().isBefore(date)
+}
+</script>

@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{% assign dt-width = 'col-4' %}
+{% assign dd-width = 'col-8' %}
+
+<div class='row'>
+  <dl class='row col-sm gig-details'>
+
+    <dt class='{{ dt-width }}'>Date:</dt>
+    <dd class='{{ dd-width }}' id='date'></dd>
+
+    <dt class='{{ dt-width }}'>Time:</dt>
+    <dd class='{{ dd-width }}'>{{ page.time }}</dd>
+
+    <dt class='{{ dt-width }}'>Location:</dt>
+    <dd class='{{ dd-width }}'>{{ page.location | replace: ',', ',<br />' }}</dd>
+
+    {% if page.price %}
+      <dt class='{{ dt-width }}'>Price</dt>
+      <dd class='{{ dd-width }}'>{{ page.price }}</dd>
+    {% endif %}
+
+    {% if page.other_bands %}
+    <dt class='{{ dt-width }}'>Also appearing</dt>
+    <dd class='{{ dd-width }}'>
+      <ul class='other-bands'>
+        {% for band in page.other_bands %}
+        <li>
+          <a href='{{ band.url }}' title='{{ band.name }}'>{{ band.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </dd>
+  {% endif %}
+
+  {% if page.facebook_id or page.venue_website %}
+  <dt class='{{ dt-width }}'>More info</dt>
+  <dd class='{{ dd-width }}'>
+    <ul class='more-info'>
+      {% if page.venue_website %}
+        <li>
+          <a href='{{ page.venue_website.url }}' title='More information'>
+            {{ page.venue_website.text }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if page.facebook_id  %}
+        <li>
+          <a href='https://facebook.com/events/{{ page.facebook_id }}/' title='Facebook event'>
+            Facebook
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </dd>
+{% endif %}
+  </dl>
+  <div class='col-md'>
+    {% include map.html latitude = page.latitude longitude = page.longitude location = page.location %}
+  </div>
+</div>
+{% include json-ld.html title = page.title date = page.date time = page.time location = page.location %}
+<script>
+gigDate = '{{ page.date | date: "%Y-%m-%d" }}'
+$('#date').text(moment(gigDate).format('dddd Do MMMM YYYY'))
+</script>

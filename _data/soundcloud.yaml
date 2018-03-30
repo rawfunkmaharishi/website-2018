@@ -1,14 +1,63 @@
 ---
+- title: Fade Zero
+  id: 422318784
+  url: https://soundcloud.com/rawfunkmaharishi/fade-zero-1
+  Location: Vine Yard Studios
+  date: '2018-03-07'
+  license: Attribution-NonCommercial-ShareAlike
+  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+- title: Live Soldering
+  id: 422317761
+  url: https://soundcloud.com/rawfunkmaharishi/live-soldering
+  Location: Vine Yard Studios
+  date: '2018-03-07'
+  license: Attribution-NonCommercial-ShareAlike
+  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+- title: Ceramic Dragon
+  id: 422314245
+  url: https://soundcloud.com/rawfunkmaharishi/ceramic-dragon
+  Location: Vine Yard Studio
+  date: '2018-03-07'
+  license: Attribution-NonCommercial-ShareAlike
+  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+- title: The Cone Mill
+  id: 422310432
+  url: https://soundcloud.com/rawfunkmaharishi/the-cone-mill
+  Location: Vine Yard Studios
+  date: '2018-03-07'
+  license: Attribution-NonCommercial-ShareAlike
+  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+- title: Route
+  id: 422308083
+  url: https://soundcloud.com/rawfunkmaharishi/route
+  Location: Vine Yard Studios
+  date: '2018-03-07'
+  license: Attribution-NonCommercial-ShareAlike
+  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+- title: New York Stuntman
+  id: 422305119
+  url: https://soundcloud.com/rawfunkmaharishi/new-york-stuntman
+  Location: Vine Yard Studios
+  date: '2018-03-07'
+  license: Attribution-NonCommercial-ShareAlike
+  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+- title: Ted
+  id: 408490110
+  url: https://soundcloud.com/rawfunkmaharishi/ted
+  location: ''
+  date: '2018-03-04'
+  license: Attribution-NonCommercial-ShareAlike
+  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+- title: The Oak Key
+  id: 408490086
+  url: https://soundcloud.com/rawfunkmaharishi/the-oak-key
+  location: ''
+  date: '2018-03-04'
+  license: Attribution-NonCommercial-ShareAlike
+  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
 - title: Make It So
   id: 329956769
   url: https://soundcloud.com/rawfunkmaharishi/make-it-so
-  location: Rooz Studios
-  date: '2017-06-14'
-  license: Attribution-NonCommercial-ShareAlike
-  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
-- title: jj3
-  id: 330389348
-  url: https://soundcloud.com/rawfunkmaharishi/jj3
   location: Rooz Studios
   date: '2017-06-14'
   license: Attribution-NonCommercial-ShareAlike
@@ -25,41 +74,5 @@
   url: https://soundcloud.com/rawfunkmaharishi/letter-for-leona
   location: Vine Yard Studios
   date: '2016-05-18'
-  license: Attribution-NonCommercial-ShareAlike
-  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
-- title: Glockenspiel
-  id: 200762822
-  url: https://soundcloud.com/rawfunkmaharishi/glockenspiel
-  location: |
-    Rogue Studios
-  date: '2015-04-09'
-  license: Attribution-NonCommercial-ShareAlike
-  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
-- title: Tortoise Stampede
-  id: 197173771
-  url: https://soundcloud.com/rawfunkmaharishi/tortoise-stampede
-  location: Rogue Studios
-  date: '2015-03-11'
-  license: Attribution-NonCommercial-ShareAlike
-  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
-- title: Bernard
-  id: 192841052
-  url: https://soundcloud.com/rawfunkmaharishi/bernard
-  location: Islington Academy
-  date: '2015-02-18'
-  license: Attribution-NonCommercial-ShareAlike
-  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
-- title: Junalbandi
-  id: 193005357
-  url: https://soundcloud.com/rawfunkmaharishi/junalbandi-3
-  location: Islington Academy
-  date: '2015-02-18'
-  license: Attribution-NonCommercial-ShareAlike
-  license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
-- title: Beer, Of Course, But Why
-  id: 193006525
-  url: https://soundcloud.com/rawfunkmaharishi/beer-of-course-but-why
-  location: Islington Academy
-  date: '2015-02-18'
   license: Attribution-NonCommercial-ShareAlike
   license_url: http://creativecommons.org/licenses/by-nc-sa/4.0/

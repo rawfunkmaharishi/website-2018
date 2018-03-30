@@ -112,3 +112,40 @@ svg.logo {
   font-size: 1em;
   top: $padding;
 }
+
+#giglist {
+  font-size: 1.2em;
+}
+
+dt {
+  text-align: right;
+}
+
+.map {
+  height: 300px;
+}
+
+.olControlAttribution {
+  right: 5px;
+  top: 280px;
+  color: $grey;
+  font-weight: bold;
+  a {
+    color: map-get($theme-colors, primary);
+  }
+}
+
+.map {
+  font-family: $font-primary;
+}
+
+.other-bands, .more-info {
+  padding-left: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.gig-details {
+  font-size: 0.8em;
+}

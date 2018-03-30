@@ -1,7 +1,16 @@
 ---
 defaults:
+
 - scope:
     path: ''
   values:
     layout: default
+- scope:
+    type: posts
+    path: gigs
+
+  values:
+    layout: gig
+
 permalink: pretty
+future: true

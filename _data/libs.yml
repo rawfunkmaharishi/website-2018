@@ -11,10 +11,14 @@ js:
   - name: fontawesome
     url:  //use.fontawesome.com/releases/v5.0.8/js/all.js
     hash: sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ
+  - name: moment
+    url:  //cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js
+  - name: leaflet
+    url:  //cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js
 
 css:
-  - name: foo
-    bar:  //bar.com/baz.css
+  - name: leaflet
+    url:  //cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css
 
 fonts:
   - name: ubuntu

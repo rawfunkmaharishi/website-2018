@@ -1,0 +1,37 @@
+<div id='map' class='map'></div>
+
+<script>
+    var map = L.map('map').setView(
+      [
+        {{ include.latitude }},
+        {{ include.longitude }}
+      ],
+      {{ site.data.attributes.map.zoom }}
+    );
+
+    L.tileLayer('//stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+    	subdomains: 'abcd',
+    	minZoom: 1,
+    	maxZoom: 20,
+    	ext: 'png'
+    }).addTo(map)
+
+    L.tileLayer('//stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.{ext}', {
+	    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> | Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	    subdomains: 'abcd',
+	    minZoom: 1,
+	    maxZoom: 20,
+	    ext: 'png'
+    }).addTo(map)
+
+    L.marker(
+      [
+        {{ include.latitude }},
+        {{ include.longitude }}
+      ]
+    ).addTo(map).bindPopup('{{ include.location }}').openPopup()
+</script>
+
+<p class='float-right'>
+  <a href='//www.openstreetmap.org/?mlat={{ include.latitude }}&amp;mlon={{ include.longitude }}#map=16/{{ include.latitude }}/{{ page.longitude }}'>View larger map</a>
+</p>
