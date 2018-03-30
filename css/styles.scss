@@ -148,4 +148,12 @@ dt {
 
 .gig-details {
   font-size: 0.8em;
+
+  dt {
+    @extend .col-4;
+  }
+
+  dd {
+    @extend .col-8;
+  }
 }

@@ -7,23 +7,23 @@ layout: default
 <div class='row'>
   <dl class='row col-sm gig-details'>
 
-    <dt class='{{ dt-width }}'>Date:</dt>
-    <dd class='{{ dd-width }}' id='date'></dd>
+    <dt>Date:</dt>
+    <dd id='date'></dd>
 
-    <dt class='{{ dt-width }}'>Time:</dt>
-    <dd class='{{ dd-width }}'>{{ page.time }}</dd>
+    <dt>Time:</dt>
+    <dd>{{ page.time }}</dd>
 
-    <dt class='{{ dt-width }}'>Location:</dt>
-    <dd class='{{ dd-width }}'>{{ page.location | replace: ',', ',<br />' }}</dd>
+    <dt>Location:</dt>
+    <dd>{{ page.location | replace: ',', ',<br />' }}</dd>
 
     {% if page.price %}
-      <dt class='{{ dt-width }}'>Price</dt>
-      <dd class='{{ dd-width }}'>{{ page.price }}</dd>
+      <dt>Price</dt>
+      <dd>{{ page.price }}</dd>
     {% endif %}
 
     {% if page.other_bands %}
-    <dt class='{{ dt-width }}'>Also appearing</dt>
-    <dd class='{{ dd-width }}'>
+    <dt'>Also appearing</dt>
+    <dd'>
       <ul class='other-bands'>
         {% for band in page.other_bands %}
         <li>
@@ -35,8 +35,8 @@ layout: default
   {% endif %}
 
   {% if page.facebook_id or page.venue_website %}
-  <dt class='{{ dt-width }}'>More info</dt>
-  <dd class='{{ dd-width }}'>
+  <dt>More info</dt>
+  <dd>
     <ul class='more-info'>
       {% if page.venue_website %}
         <li>
