@@ -8,6 +8,10 @@
 
 @import 'footer';
 
+p, dl {
+  font-family: $font-primary;
+}
+
 h1, h2, h3 {
   text-align: center;
   color: $dark-grey;
