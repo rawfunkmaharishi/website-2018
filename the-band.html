@@ -4,7 +4,7 @@ title: The Band
 
 <div class="row">
   {% for musician in site.data.band %}
-  <div class="col-sm photo">
+  <div class="col-sm photo musician">
     <img
       src='/assets/images/the-band/{{ musician.image }}'
       class='rounded mx-auto d-block'
@@ -13,13 +13,6 @@ title: The Band
       title='Photographer: {{ musician.photographer | capitalize }}<br />License: {{ site.data.licenses[musician.license].short-name }}'
     />
     <h2 class='musician-name'>{{ musician.name }}</h2>
-    {% if musician.twitter %}
-      <!-- <span class='twitter'>
-        <a href='https://twitter.com/{{ musician.twitter }}'
-           alt='{{ musician.title }} on Twitter'
-           title='{{ musician.title }} on Twitter'>@{{ musician.twitter }}</a>
-      </span> -->
-      {% endif %}
   </div>
   {% endfor %}
 </div>
