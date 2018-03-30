@@ -3,16 +3,14 @@ title: Videos
 ---
 
 <div class="row">
-  {% for video in site.data.vimeo %}
-  <div class="col-6">
-    <div class="embed-responsive embed-responsive-16by9 video">
-      <iframe class='embed-responsive-item'
-              src='//player.vimeo.com/video/{{ video.id }}'
-              width='560'
-              height='315'
-              allowfullscreen>
-      </iframe>
-    </div>
-  </div>
+  {% for video in site.data.vimeo limit:2 %}
+    {% include video.html id = video.id %}
+  {% endfor %}
+</div>
+
+
+<div class="row">
+  {% for video in site.data.vimeo offset:2 limit:3 %}
+    {% include video.html id = video.id %}
   {% endfor %}
 </div>
