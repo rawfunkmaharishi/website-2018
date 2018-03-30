@@ -1,0 +1,14 @@
+---
+title: What people are saying about us
+---
+
+<dl class='reviews'>
+{% for review in site.data.reviews reversed %}
+  <dt>
+    '{{ review.quote }}'
+  </dt>
+  <dd>
+    -- {{ review.source }}
+  </dd>
+{% endfor %}
+</dl>

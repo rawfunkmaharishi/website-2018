@@ -157,3 +157,22 @@ dt {
     @extend .col-8;
   }
 }
+
+.reviews {
+  dd, dt {
+    padding: $padding;
+  }
+
+  dt {
+    text-align: left;
+  }
+
+  dd {
+    text-align: right;
+    border-bottom: 1px $light-grey solid;
+  }
+
+  dd:last-child {
+    border: none;
+  }
+}
