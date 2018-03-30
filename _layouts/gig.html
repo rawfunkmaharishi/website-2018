@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-{% assign dt-width = 'col-4' %}
-{% assign dd-width = 'col-8' %}
 
 <div class='row'>
   <dl class='row col-sm gig-details'>
@@ -22,8 +20,8 @@ layout: default
     {% endif %}
 
     {% if page.other_bands %}
-    <dt'>Also appearing</dt>
-    <dd'>
+    <dt>Also appearing:</dt>
+    <dd>
       <ul class='other-bands'>
         {% for band in page.other_bands %}
         <li>
@@ -35,7 +33,7 @@ layout: default
   {% endif %}
 
   {% if page.facebook_id or page.venue_website %}
-  <dt>More info</dt>
+  <dt>More info:</dt>
   <dd>
     <ul class='more-info'>
       {% if page.venue_website %}
@@ -58,7 +56,7 @@ layout: default
 {% endif %}
   </dl>
   <div class='col-md'>
-    {% include map.html latitude = page.latitude longitude = page.longitude location = page.location %}
+    {% include map.html latitude = page.latitude longitude = page.longitude title = page.title location = page.location %}
   </div>
 </div>
 {% include json-ld.html title = page.title date = page.date time = page.time location = page.location %}

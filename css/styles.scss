@@ -89,6 +89,8 @@ svg.logo {
 .photo {
   position: relative;
   padding: $padding;
+  min-width: 30%;
+  height: auto;
 }
 
 .sound, .video {
@@ -109,7 +111,7 @@ svg.logo {
 }
 
 .picture-caption {
-  font-size: 1em;
+  font-size: 0.7em;
   top: $padding;
 }
 
@@ -139,6 +141,10 @@ dt {
   font-family: $font-primary;
 }
 
+.leaflet-popup-content {
+  font-size: 0.8em;
+}
+
 .other-bands, .more-info {
   padding-left: 0;
   li {
@@ -147,7 +153,8 @@ dt {
 }
 
 .gig-details {
-  font-size: 0.8em;
+  font-size: 1em;
+  height: 100%;
 
   dt {
     @extend .col-4;

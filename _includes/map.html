@@ -29,7 +29,7 @@
         {{ include.latitude }},
         {{ include.longitude }}
       ]
-    ).addTo(map).bindPopup('{{ include.location }}').openPopup()
+    ).addTo(map).bindPopup('{{ include.location | split: ',' | first }}').openPopup()
 </script>
 
 <p class='float-right'>

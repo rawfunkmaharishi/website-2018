@@ -8,7 +8,7 @@ title: Pictures
     <a href='{{ picture.photo_page }}'>
       <img
         src='{{ picture.photo_url }}'
-        class='rounded mx-auto d-block'
+        class='rounded mx-auto d-block img-fluid'
         data-toggle='tooltip'
         data-html='true'
         title='Photographer: {{ picture.photographer | capitalize }}<br />License: {{ site.data.licenses[picture.license].short-name }}'
