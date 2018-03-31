@@ -4,22 +4,19 @@ title: What people are saying about us
 
 <div class='row'>
 {% for review in site.data.reviews reversed %}
-  <div class='card review col-md'>
-    <div class='card-body'>
-      <blockquote class='blockquote mb-0'>
-        <p>
-          '{{ review.quote }}'
-        </p>
-        <footer class='blockquote-footer'>
-          {{ review.source }}
-        </footer>
-      </blockquote>
+  <div class='col-xs col-md-6'>
+    <div class='card review'>
+      <div class='card-body'>
+        <blockquote class='blockquote mb-0'>
+          <p>
+            '{{ review.quote }}'
+          </p>
+          <footer class='blockquote-footer'>
+            {{ review.source }}
+          </footer>
+        </blockquote>
+      </div>
     </div>
   </div>
-
-  {% capture breakpoint %}{{ forloop.index0 | modulo: 2}}{% endcapture %}
-  {% if breakpoint == '1' %}
-    </div><div class='row'>
-  {% endif %}
 {% endfor %}
 </div>

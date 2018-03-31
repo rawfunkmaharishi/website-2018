@@ -26,6 +26,10 @@ p {
   text-align: justify;
 }
 
+blockquote > p {
+  text-align: left;
+}
+
 h1, h2, h3, h4 {
   text-align: center;
   color: $dark-grey;
