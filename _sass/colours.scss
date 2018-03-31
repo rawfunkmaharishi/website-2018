@@ -10,9 +10,9 @@ $light-grey: lighten($grey, 25%);
 $dark-grey: darken($grey, 25%);
 
 $theme-colors: (
-  primary: rgb(209, 77, 77),
+  primary: $rgba-primary-0,
   secondary: $rgba-secondary-1-0,
-  complement: $rgba-complement-0
+//  complement: $rgba-complement-0
   // success: $green,
   // info: $cyan,
   // warning: $yellow,

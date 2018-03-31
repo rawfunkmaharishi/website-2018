@@ -12,6 +12,10 @@ p, dl, ul {
   font-family: $font-primary;
 }
 
+body {
+  background-color: lighten(map-get($theme-colors, secondary), 65%);
+}
+
 h1, h2, h3 {
   text-align: center;
   color: $dark-grey;
