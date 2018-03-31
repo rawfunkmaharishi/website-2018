@@ -5,12 +5,23 @@ defaults:
     path: ''
   values:
     layout: default
+
 - scope:
     type: posts
     path: gigs
-
   values:
     layout: gig
+    priority: 100
+
+- scope:
+    type: albums
+#     path: ''
+  values:
+    layout: album
+#
+collections:
+  albums:
+    output: true
 
 permalink: pretty
 future: true

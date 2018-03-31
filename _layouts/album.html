@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class='row'>
+  <div class='col-md'>
+    <p>Released {{ page.release_date | date: "%B %Y"  }}</p>
+    <p> Available on
+      {% for outlet in page.outlets %}
+        <a href='{{ outlet.url }}'>{{ outlet.name }}</a>,
+      {% endfor %}
+      iTunes, BitTorrent and elsewhere
+    </p>
+  </div>
+  <div class='col-md'>
+    <a href='#' data-toggle="modal" data-target="#{{ page.title }}-modal">
+      <img
+        src='/assets/album-covers/{{ page.cover_image }}'
+        alt='{{ page.title }}'
+        class='rounded mx-auto d-block img-fluid album-cover'
+      />
+    </a>
+  </div>
+  <div class='col-md'>
+    <iframe
+    class='rounded mx-auto d-block spotify'
+      src="https://open.spotify.com/embed/album/{{ page.spotify_id }}"
+      width="300"
+      height="350"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    ></iframe>
+  </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class='modal' id='{{ page.title }}-modal' tabindex='-1' role='dialog' aria-labelledby='{{ page.title  }}-label' aria-hidden='true'>
+  <div class='modal-dialog modal-dialog-centered'>
+    <div class='modal-content'>
+      <div class='modal-body merch-logo'>
+        <img
+          src='/assets/album-covers/{{ page.cover_image }}'
+          alt='{{ page.title }}'
+          class='mx-auto d-block img-fluid'
+        />
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

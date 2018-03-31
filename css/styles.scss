@@ -215,3 +215,7 @@ dt {
   background-color: darken(map-get($theme-colors, primary), 10%);
   color: $light-grey;
 }
+
+.spotify, .album-cover {
+  margin-bottom: $padding;
+}

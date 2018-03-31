@@ -1,0 +1,10 @@
+---
+title: Albums
+---
+
+<dl class='row'>
+  {% for album in site.albums %}
+    <dt class='col-6'>{{ album.release_date | date: "%B %Y" }}</dt>
+    <dd class='col-6'><a href='{{ album.url }}'>{{ album.title }}</a></dd>
+  {% endfor %}
+</dl>
