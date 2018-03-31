@@ -1,0 +1,33 @@
+.header {
+  background: url(../assets/backgrounds/clouds-red.jpg);
+  height: $banner-height;
+
+  #mobile-logo, #main-logo {
+    svg.logo {
+      display: block;
+      height: $banner-height * 0.9;
+      padding-top: $padding;
+      padding-left: $padding;
+    }
+  }
+}
+
+#main-nav {
+  text-align: right;
+  position: absolute;
+  top: $padding;
+  right: $padding;
+
+  text-transform: uppercase;
+
+  li > a {
+    padding: 0;
+    margin: 0;
+    opacity: $opacity;
+    color: white;
+  }
+
+  li > a:hover {
+    opacity: $opacity * 2;
+  }
+}

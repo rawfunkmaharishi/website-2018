@@ -3,10 +3,16 @@
 @import 'variables';
 @import 'colours';
 @import 'fonts';
-
+@import 'nav';
+@import 'assets';
+@import 'gigs';
+@import 'footer';
 @import 'bootstrap';
 
-@import 'footer';
+body {
+  background-color: lighten(map-get($theme-colors, secondary), 65%);
+  //text-shadow: 0px 0px 1px $light-grey;
+}
 
 p, dl, ul {
   font-family: $font-primary;
@@ -14,11 +20,6 @@ p, dl, ul {
 
 p {
   text-align: justify;
-}
-
-body {
-  background-color: lighten(map-get($theme-colors, secondary), 65%);
-  //text-shadow: 0px 0px 1px $light-grey;
 }
 
 h1, h2, h3 {
@@ -43,6 +44,10 @@ h3 {
   font-size: 1em;
 }
 
+dt {
+  text-align: right;
+}
+
 a {
   color: map-get($theme-colors, primary);
 }
@@ -52,53 +57,8 @@ a:hover {
   color: darken(map-get($theme-colors, primary), 25%);
 }
 
-#main-nav {
-  text-align: right;
-  position: absolute;
-  top: $padding;
-  right: $padding;
-
-  text-transform: uppercase;
-
-  li > a {
-    padding: 0;
-    margin: 0;
-    opacity: $opacity;
-    color: white;
-  }
-
-  li > a:hover {
-    opacity: $opacity * 2;
-  }
-}
-
-#big-logo {
-  height: 100%;
-  display: flex;
-
-  svg.logo {
-    display: block;
-    margin: auto;
-    width: 60%;
-  }
-}
-
 .tooltip-inner {
   font-size: 0.8em;
-}
-
-.header {
-  background: url(../assets/backgrounds/clouds-red.jpg);
-  height: $banner-height;
-
-  #mobile-logo, #main-logo {
-    svg.logo {
-      display: block;
-      height: $banner-height * 0.9;
-      padding-top: $padding;
-      padding-left: $padding;
-    }
-  }
 }
 
 svg.logo {
@@ -109,108 +69,6 @@ svg.logo {
 
   path:hover {
     opacity: $opacity * 0.5;
-  }
-}
-
-.photo {
-  position: relative;
-  padding: $padding;
-  min-width: 50%;
-  height: auto;
-}
-
-.musician {
-  min-width: 30%;
-}
-
-.sound, .video {
-  margin: $padding;
-  display: block;
-  margin: auto;
-  margin-bottom: $padding;
-}
-
-.musician-name, .picture-caption {
-  font-size: 4em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-  padding: $padding;
-  text-transform: uppercase;
-  opacity: $opacity * 2;
-  text-shadow: 0px 0px 4px black;
-}
-
-.picture-caption {
-  font-size: 0.7em;
-  top: $padding;
-}
-
-#giglist {
-  font-size: 1.2em;
-}
-
-dt {
-  text-align: right;
-}
-
-.map {
-  height: 300px;
-}
-
-.leaflet-control {
-  text-align: right;
-  a {
-    color: map-get($theme-colors, primary);
-  }
-}
-
-.map {
-  font-family: $font-primary;
-}
-
-.leaflet-popup-content {
-  font-size: 0.8em;
-}
-
-.other-bands, .more-info {
-  margin: 0;
-  padding-left: 0;
-  li {
-    list-style-type: none;
-  }
-}
-
-.gig-details {
-  font-size: 1em;
-  height: 100%;
-
-  dt {
-    @extend .col-4;
-  }
-
-  dd {
-    @extend .col-8;
-  }
-}
-
-.blog-archive {
-  dd, dt {
-    padding: $padding;
-  }
-
-  dt {
-    text-align: left;
-  }
-
-  dd {
-    border-bottom: 1px $light-grey solid;
-  }
-
-  dd:last-child {
-    border: none;
   }
 }
 
@@ -235,10 +93,6 @@ dt {
   color: $light-grey;
 }
 
-.spotify, .album-cover {
-  margin-bottom: $padding;
-}
-
 .cal-subscribe {
   position: absolute;
   right: $padding;
@@ -246,12 +100,20 @@ dt {
   font-size: 0.7em;
 }
 
-#archive {
-  dt, dd {
-    font-size: 0.8em;
+.blog-archive {
+  dd, dt {
+    padding: $padding;
   }
-}
 
-iframe {
-  border: 0;
+  dt {
+    text-align: left;
+  }
+
+  dd {
+    border-bottom: 1px $light-grey solid;
+  }
+
+  dd:last-child {
+    border: none;
+  }
 }

@@ -1,0 +1,43 @@
+.photo {
+  position: relative;
+  padding: $padding;
+  min-width: 50%;
+  height: auto;
+}
+
+.musician {
+  min-width: 30%;
+}
+
+.sound, .video {
+  margin: $padding;
+  display: block;
+  margin: auto;
+  margin-bottom: $padding;
+}
+
+.musician-name, .picture-caption {
+  font-size: 4em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: $padding;
+  text-transform: uppercase;
+  opacity: $opacity * 2;
+  text-shadow: 0px 0px 4px black;
+}
+
+.picture-caption {
+  font-size: 0.7em;
+  top: $padding;
+}
+
+.spotify, .album-cover {
+  margin-bottom: $padding;
+}
+
+iframe {
+  border: 0;
+}

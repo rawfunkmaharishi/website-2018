@@ -8,3 +8,14 @@ body {
 html, body, #splash-container {
   height: 100%;
 }
+
+#big-logo {
+  height: 100%;
+  display: flex;
+
+  svg.logo {
+    display: block;
+    margin: auto;
+    width: 60%;
+  }
+}

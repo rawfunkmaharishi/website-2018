@@ -1,0 +1,42 @@
+#giglist {
+  font-size: 1.2em;
+}
+
+.other-bands, .more-info {
+  margin: 0;
+  padding-left: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.gig-details {
+  font-size: 1em;
+  height: 100%;
+
+  dt {
+    @extend .col-4;
+  }
+
+  dd {
+    @extend .col-8;
+  }
+}
+
+#archive {
+  dt, dd {
+    font-size: 0.8em;
+  }
+}
+
+.map {
+  height: 300px;
+  font-family: $font-primary;
+}
+
+.leaflet-control {
+  text-align: right;
+  a {
+    color: map-get($theme-colors, primary);
+  }
+}
