@@ -17,9 +17,9 @@ title: Gigs
   class='row'></dl>
 
 <h2>Archive</h2>
-<dl
+<div
   id='archive'
-  class='row'></dl>
+  class='row'></div>
 
 <script>
 gigs = [
@@ -39,13 +39,29 @@ $.each(gigs, function(index, gig) {
   dt = '<dt class="col-6">' + date + '</dt>'
   dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
 
-  target = '#archive'
   if (isFuture(gig.date)) {
     nothingPlanned = false
+    dt = '<dt class="col-6">' + date + '</dt>'
+    dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
     target = '#giglist'
+    $(target).append(dt + dd)
+  } else {
+    content = `
+    <div class='col-md'>
+      <div class='card'>
+        <h4>${ date }</h4>
+        <h3>
+          <a href="${ gig.url }">
+            ${ gig.title }
+          </a>
+        </h3>
+      </div>
+    </div>
+    `
+    target = '#archive'
+    $(target).append(content)
   }
 
-  $(target).append(dt + dd)
 })
 
 if (nothingPlanned) {
@@ -56,7 +72,7 @@ if (nothingPlanned) {
 }
 
 function fancyDate(isoDate) {
-  format = 'Do MMMM YYYY'
+  format = 'Do MMMM'
   if (isFuture(isoDate)) {
     format = 'dddd Do MMMM'
   }
