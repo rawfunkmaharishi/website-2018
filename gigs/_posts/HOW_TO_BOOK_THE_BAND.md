@@ -8,16 +8,25 @@
 
 ```
 ---
+# mandatory fields
 location:    {whatever address}
-time:        {24hr format, quoted because YAML}
-price:       {optional, with currency symbol}
-facebook_id: {optional, if you have an FB event}
+time:        {24hr format, quoted because YAML is bad}
 latitude:    {where in the world}
 longitude:   {is your place located?}
+
+# optional fields
+price:       {with currency symbol}
+facebook_id: {if you have an FB event}
+other_bands:
+  - name: {some other band appearing at the show}
+    url:  {some other band's website}
+venue_website:
+  url:  {venue or event website}
+  text: {text for link}
 ---
 ```
 
-(The dashes top-and-bottom are __important__. See this [existing event](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/gigs/_posts/2014-10-22-the-comedy.md) as a guide)
+(The dashes top-and-bottom are __important__. See this [existing event](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/gigs/_posts/2017-01-31-hoxton-underbelly.md) as a guide)
 
 * `bundle`
 * `jekyll serve`
@@ -27,7 +36,7 @@ longitude:   {is your place located?}
 
 And then I guess we negotiate in the PR discussion and merge when everybody's happy
 
-This will also embed JSON-LD in the event page:
+This will also embed some [JSON-LD](http://rawfunkmaharishi.uk/blog/2015/01/19/linking-data/) in the event page:
 
 ```
 <script type="application/ld+json">
@@ -49,7 +58,5 @@ This will also embed JSON-LD in the event page:
 }]
 </script>
 ```
-
-because who doesn't like a bit of [Linked Data](http://rawfunkmaharishi.uk/blog/2015/01/19/linking-data/)?
 
 Seriously, if you do this, you have a _very very good chance_ of us playing your show

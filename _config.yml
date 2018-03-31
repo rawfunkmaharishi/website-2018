@@ -15,10 +15,16 @@ defaults:
 
 - scope:
     type: albums
-#     path: ''
   values:
     layout: album
-#
+
+- scope:
+    type: posts
+    path: blog
+
+  values:
+    priority: 100
+
 collections:
   albums:
     output: true
