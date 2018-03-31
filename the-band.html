@@ -13,12 +13,13 @@ title: The Band
       data-html='true'
       title='Photographer: {{ musician.photographer | capitalize }}<br />License: {{ site.data.licenses[musician.license].short-name }}'
     />
-    {% capture name %}<h2 class='musician-name'>{{ musician.name }}</h2>{% endcapture %}
+    {% capture name %}
+      <h2 class='musician-name'>{{ musician.name }}</h2>
+    {% endcapture %}
     {% if musician.twitter %}
       <a
         href='//twitter.com/{{ musician.twitter }}'
-        title="{{ musician.name }}'s Twitter feed"
-      >
+        title="{{ musician.name }}'s Twitter feed">
         {{ name }}
       </a>
     {% else %}

@@ -1,14 +1,23 @@
 {% for lib in site.data.libs.css %}
 <!-- {{ lib.name }} -->
-<link rel='stylesheet' href='{{ lib.url }}' integrity='{{ lib.hash }}' crossorigin='anonymous'>
+<link
+  rel='stylesheet'
+  href='{{ lib.url }}'
+  integrity='{{ lib.hash }}'
+  crossorigin='anonymous'>
 {% endfor %}
 
 {% for font in site.data.libs.fonts %}
 <!-- {{ font.name }} -->
-<link rel='stylesheet' href='{{ font.url }}'>
+<link
+  rel='stylesheet'
+  href='{{ font.url }}'>
 {% endfor %}
 
 {% for lib in site.data.libs.js %}
 <!-- {{ lib.name }} -->
-<script src='{{ lib.url }}' integrity='{{ lib.hash }}' crossorigin='anonymous'></script>
+<script
+  src='{{ lib.url }}'
+  integrity='{{ lib.hash }}'
+  crossorigin='anonymous'></script>
 {% endfor %}

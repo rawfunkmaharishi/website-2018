@@ -12,9 +12,12 @@ title: Pictures
         alt='https://peaceful-wilson-4d9a1f.netlify.com/pictures/'
         data-toggle='tooltip'
         data-html='true'
-        title='Photographer: {{ picture.photographer | capitalize }}<br />License: {{ site.data.licenses[picture.license].short-name }}'
+        title='Photographer: {{ picture.photographer | capitalize }}<br />
+          License: {{ site.data.licenses[picture.license].short-name }}'
       />
-      <h2 class='picture-caption'>{{ picture.title }}</h2>
+      <h2 class='picture-caption'>
+        {{ picture.title }}
+      </h2>
     </a>
   </div>
   {% endfor %}

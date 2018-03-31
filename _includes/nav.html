@@ -1,7 +1,13 @@
-<ul class='nav flex-column' id='main-nav'>
+<ul
+  class='nav flex-column'
+  id='main-nav'>
   {% for item in site.data.navigation %}
     <li class='nav-item'>
-      <a class='nav-link' href='/{{ item.path }}'>{{ item.title }}</a>
+      <a
+        class='nav-link'
+        href='/{{ item.path }}'>
+        {{ item.title }}
+      </a>
     </li>
   {% endfor %}
 </ul>

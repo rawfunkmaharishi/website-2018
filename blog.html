@@ -9,8 +9,10 @@ title: Blog
     <a href='{{ blost.url }}'>{{ blost.title }}</a>
   </dt>
   <dd>
-      {{ blost.excerpt | strip_html | truncate: 150, '...' }}
-      <span class='small'><a href='{{ include.url }}'>[read more]</a></span>
+    {{ blost.excerpt | strip_html | truncate: 150, '...' }}
+    <span class='small'>
+      <a href='{{ include.url }}'>[read more]</a>
+    </span>
   </dd>
   {% endfor %}
 </dl>

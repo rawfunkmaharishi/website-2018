@@ -7,14 +7,19 @@ title: Gigs
   class='btn btn-info cal-subscribe'
   data-toggle='tooltip'
   data-placement='bottom'
-  title='Add our gig schedule to your calendar'
->Gig calendar</a>
+  title='Add our gig schedule to your calendar'>
+  Gig calendar
+</a>
 
 <h2>Upcoming</h2>
-<dl id='giglist' class='row'></dl>
+<dl
+  id='giglist'
+  class='row'></dl>
 
 <h2>Archive</h2>
-<dl id='archive' class='row'></dl>
+<dl
+  id='archive'
+  class='row'></dl>
 
 <script>
 gigs = [
@@ -44,7 +49,10 @@ $.each(gigs, function(index, gig) {
 })
 
 if (nothingPlanned) {
-  $('<p class="text-center">Nothing in the calendar. Why not <a href="/book-the-band/">book us?</a></p>').insertBefore('#giglist')
+  $(`<p class="text-center">
+    Nothing in the calendar. Why not
+    <a href="/book-the-band/">book us?</a></p>
+  `).insertBefore('#giglist')
 }
 
 function fancyDate(isoDate) {

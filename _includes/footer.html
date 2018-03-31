@@ -1,8 +1,13 @@
 <ul class='footer p-2 list-inline'>
   {% for link in site.data.links %}
     <li class='list-inline-item'>
-      <a href='{{ link.url }}' title='{{ link.title }}'>
-        <i class='fab {{ link.fontawesome }}' data-toggle='tooltip' title='{{ link.title }}'></i>
+      <a
+        href='{{ link.url }}'
+        title='{{ link.title }}'>
+        <i
+          class='fab {{ link.fontawesome }}'
+          data-toggle='tooltip'
+          title='{{ link.title }}'></i>
       </a>
     </li>
   {% endfor %}

@@ -4,18 +4,27 @@ title: Videos
 
 <div class="row">
   {% for video in site.data.vimeo limit:1 %}
-    {% include video.html id = video.id title = video.title license = video.license %}
+    {% include video.html
+      id = video.id
+      title = video.title
+      license = video.license %}
   {% endfor %}
 </div>
 
 <div class="row">
   {% for video in site.data.vimeo offset:1 limit:2 %}
-    {% include video.html id = video.id title = video.title license = video.license %}
+    {% include video.html
+      id = video.id
+      title = video.title
+      license = video.license %}
   {% endfor %}
 </div>
 
 <div class="row">
   {% for video in site.data.vimeo offset:3 limit:2 %}
-    {% include video.html id = video.id title = video.title license = video.license %}
+    {% include video.html
+      id = video.id
+      title = video.title
+      license = video.license %}
   {% endfor %}
 </div>

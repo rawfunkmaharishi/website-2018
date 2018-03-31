@@ -25,7 +25,11 @@ layout: default
       <ul class='other-bands'>
         {% for band in page.other_bands %}
         <li>
-          <a href='{{ band.url }}' title='{{ band.name }}'>{{ band.name }}</a>
+          <a
+            href='{{ band.url }}'
+            title='{{ band.name }}'>
+            {{ band.name }}
+          </a>
         </li>
         {% endfor %}
       </ul>
@@ -38,7 +42,9 @@ layout: default
     <ul class='more-info'>
       {% if page.venue_website %}
         <li>
-          <a href='{{ page.venue_website.url }}' title='More information'>
+          <a
+            href='{{ page.venue_website.url }}'
+            title='More information'>
             {{ page.venue_website.text }}
           </a>
         </li>
@@ -46,7 +52,9 @@ layout: default
 
       {% if page.facebook_id  %}
         <li>
-          <a href='https://facebook.com/events/{{ page.facebook_id }}/' title='Facebook event'>
+          <a
+            href='https://facebook.com/events/{{ page.facebook_id }}/'
+            title='Facebook event'>
             Facebook
           </a>
         </li>
@@ -56,7 +64,12 @@ layout: default
 {% endif %}
   </dl>
   <div class='col-md'>
-    {% include map.html latitude = page.latitude longitude = page.longitude title = page.title location = page.location %}
+    {% include map.html
+      latitude = page.latitude
+      longitude = page.longitude
+      title = page.title
+      location = page.location
+    %}
   </div>
 </div>
 {% include json-ld.html
@@ -69,6 +82,6 @@ layout: default
   longitude = page.longitude
 %}
 <script>
-gigDate = '{{ page.date | date: "%Y-%m-%d" }}'
-$('#date').text(moment(gigDate).format('dddd Do MMMM YYYY'))
+  gigDate = '{{ page.date | date: "%Y-%m-%d" }}'
+  $('#date').text(moment(gigDate).format('dddd Do MMMM YYYY'))
 </script>
