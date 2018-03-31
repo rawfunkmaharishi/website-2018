@@ -17,6 +17,7 @@ h1, h2, h3 {
   color: $dark-grey;
   font-family: $font-primary;
   padding: $padding;
+  font-weight: bold;
 }
 
 h1 {
@@ -26,7 +27,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 a {
@@ -222,4 +223,11 @@ dt {
 
 .spotify, .album-cover {
   margin-bottom: $padding;
+}
+
+.cal-subscribe {
+  position: absolute;
+  right: $padding;
+  top: $banner-height + ($padding);
+  font-size: 0.7em;
 }
