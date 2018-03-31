@@ -3,7 +3,9 @@
   "@context" : "http://schema.org",
   "@type" : "MusicEvent",
   "name" : "Raw Funk Maharishi live at {{ include.title }}",
+  "description" : "Raw Funk Maharishi live at {{ include.title }}",
   "startDate" : "{{ include.date | date: "%Y-%m-%d" }}T{{ include.time }}",
+  "endDate" : "{{ include.date | date: "%Y-%m-%d" }}T{{ include.time }}"
   "location" : {
     "@type" : "Place",
     "name" : "{{ include.title }}",
@@ -12,12 +14,12 @@
       "@type": "PostalAddress",
       "addressCountry": "United Kingdom",
       "streetAddress": "{{ include.location }}"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "{{ include.latitude}}",
+      "longitude": "{{ include.longitude }}"
     }
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "{{ include.latitude}}",
-    "longitude": "{{ include.longitude }}"
   },
   "performer" : [{
     "@type" : "MusicGroup",
