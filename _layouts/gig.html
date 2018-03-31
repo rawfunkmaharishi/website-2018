@@ -59,7 +59,15 @@ layout: default
     {% include map.html latitude = page.latitude longitude = page.longitude title = page.title location = page.location %}
   </div>
 </div>
-{% include json-ld.html title = page.title date = page.date time = page.time location = page.location %}
+{% include json-ld.html
+  title = page.title
+  date = page.date
+  time = page.time
+  location = page.location
+  url = page.venue_website.url
+  latitude = page.latitude
+  longitude = page.longitude
+%}
 <script>
 gigDate = '{{ page.date | date: "%Y-%m-%d" }}'
 $('#date').text(moment(gigDate).format('dddd Do MMMM YYYY'))

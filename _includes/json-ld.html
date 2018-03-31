@@ -7,7 +7,17 @@
   "location" : {
     "@type" : "Place",
     "name" : "{{ include.title }}",
-    "address" : "{{ include.location }}"
+    {% if include.url %}"url": "{{ include.url }}",{% endif %}
+    "address" : {
+      "@type": "PostalAddress",
+      "addressCountry": "United Kingdom"
+      "streetAddress": "{{ include.location }}"
+    }
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "{{ include.latitude}}",
+    "longitude": "{{ include.longitude }}"
   },
   "performer" : [{
     "@type" : "MusicGroup",
