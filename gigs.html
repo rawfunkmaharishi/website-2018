@@ -18,8 +18,8 @@ title: Gigs
 
 <h2>Archive</h2>
 <div
-  id='archive-buttons'
-  class='row'></div>
+  id='archive-links'
+  class='text-center'></div>
 <div id='archive'></div>
 
 <script>
@@ -50,16 +50,13 @@ $.each(gigs, function(index, gig) {
     year = moment(gig.date).format('YYYY')
     arch = 'archive-' + year
     if (! $('#' + arch).length) {
-      $('#archive-buttons').append(`
-      <div class='col-4 col-md text-center'>
-        <button
-          type='button'
-          class='btn btn-info'
-          data-toggle='modal'
-          data-target='#${ arch }-modal'>
+      $('#archive-links').append(`
+      <a
+        href='#'
+        data-toggle='modal'
+        data-target='#${ arch }-modal'>
           ${ year }
-        </button>
-      </div>
+        </a>
       `)
       $('#archive').append(`
         <div
@@ -73,7 +70,7 @@ $.each(gigs, function(index, gig) {
             role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h2>${ year } gigs</h2>
+                <h2 class='modal-title'>${ year } gigs</h2>
               </div>
               <div class="modal-body row" id='${ arch }'>
               </div>
