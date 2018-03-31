@@ -18,8 +18,9 @@ title: Gigs
 
 <h2>Archive</h2>
 <div
-  id='archive'
+  id='archive-buttons'
   class='row'></div>
+<div id='archive'></div>
 
 <script>
 gigs = [
@@ -46,6 +47,48 @@ $.each(gigs, function(index, gig) {
     target = '#giglist'
     $(target).append(dt + dd)
   } else {
+    year = moment(gig.date).format('YYYY')
+    arch = 'archive-' + year
+    if (! $('#' + arch).length) {
+      $('#archive-buttons').append(`
+      <div class='col-4 col-md text-center'>
+        <button
+          type='button'
+          class='btn btn-info'
+          data-toggle='modal'
+          data-target='#${ arch }-modal'>
+          ${ year }
+        </button>
+      </div>
+      `)
+      $('#archive').append(`
+        <div
+          class="modal fade"
+          id="${ arch }-modal"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true">
+          <div
+            class="modal-dialog"
+            role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>${ year } gigs</h2>
+              </div>
+              <div class="modal-body row" id='${ arch }'>
+              </div>
+              <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-info"
+                data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      `)
+    }
     content = `
     <div class='col-md'>
       <div class='card'>
@@ -58,8 +101,7 @@ $.each(gigs, function(index, gig) {
       </div>
     </div>
     `
-    target = '#archive'
-    $(target).append(content)
+    $('#' + arch).append(content)
   }
 
 })
@@ -72,7 +114,7 @@ if (nothingPlanned) {
 }
 
 function fancyDate(isoDate) {
-  format = 'Do MMMM'
+  format = 'Do MMMM YYYY'
   if (isFuture(isoDate)) {
     format = 'dddd Do MMMM'
   }

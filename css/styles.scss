@@ -49,7 +49,6 @@ h3 {
 }
 
 #archive {
-  
   h4 {
     font-size: 0.8em;
   }
@@ -102,6 +101,11 @@ svg.logo {
   background-color: map-get($theme-colors, primary);
   padding: $padding;
   margin: $padding;
+}
+
+.btn {
+ font-family: $font-primary;
+ margin-bottom: $padding;
 }
 
 .btn-info, .btn-warning  {
