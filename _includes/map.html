@@ -24,11 +24,17 @@
 	    ext: 'png'
     }).addTo(map)
 
+    var redMarker = L.AwesomeMarkers.icon({
+      //icon: 'fab fa-github',
+      markerColor: 'red'
+    });
+
     L.marker(
       [
         {{ include.latitude }},
         {{ include.longitude }}
-      ]
+      ],
+      {icon: redMarker}
     ).addTo(map).bindPopup('{{ include.location | split: ',' | first }}').openPopup()
 </script>
 
