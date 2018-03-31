@@ -60,6 +60,10 @@ a {
   color: map-get($theme-colors, primary);
 }
 
+a, a:active, a:focus {
+   outline: none;
+}
+
 a:hover {
   text-decoration: none;
   color: darken(map-get($theme-colors, primary), 25%);
