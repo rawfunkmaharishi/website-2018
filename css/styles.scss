@@ -34,6 +34,10 @@ h2 {
   font-size: 1.3em;
 }
 
+h3 {
+  font-size: 1em;
+}
+
 a {
   color: map-get($theme-colors, primary);
 }
@@ -167,6 +171,7 @@ dt {
 }
 
 .other-bands, .more-info {
+  margin: 0;
   padding-left: 0;
   li {
     list-style-type: none;

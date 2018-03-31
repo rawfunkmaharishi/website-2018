@@ -3,20 +3,16 @@ title: Albums
 ---
 
 <div class='row'>
-  {% for album in site.albums %}
-  <div class='col-md'>
-    <a href='{{ album.url }}'>
-      <h2>{{ album.title }} - {{ album.release_date | date: "%B %Y" }}</h2>
-    </a>
-  </div>
-  <div class='col-md'>
-    <a href='{{ album.url }}'>
-      <img
-        src='/assets/album-covers/{{ album.title | lowercase }}.jpg'
-        alt='{{ page.title }}'
-        class='rounded mx-auto d-block img-fluid album-cover'
-      />
-    </a>
-  </div>
+  {% assign albums = site.albums | sort: 'release_date' %}
+  {% for album in albums %}
+    <div class='col-md'>
+      <a href='{{ album.url }}'>
+        <img
+          src='/assets/album-covers/{{ album.cover_image }}'
+          alt='{{ page.title }}'
+          class='rounded mx-auto d-block img-fluid album-cover'
+        />
+      </a>
+    </div>
   {% endfor %}
 </div>
