@@ -19,8 +19,6 @@ layout: default
         width="560"
         height="315"
         src="//www.youtube.com/embed/videoseries?list={{ page.youtube_id }}"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
         allowfullscreen
       ></iframe>
     </div>
@@ -42,9 +40,6 @@ layout: default
       src="https://open.spotify.com/embed/album/{{ page.spotify_id }}"
       width="300"
       height="350"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
     ></iframe>
   </div>
 </div>
@@ -55,7 +50,6 @@ layout: default
   id='{{ page.title }}-modal'
   tabindex='-1'
   role='dialog'
-  aria-labelledby='{{ page.title  }}-label'
   aria-hidden='true'
 >
   <div class='modal-dialog modal-dialog-centered'>
