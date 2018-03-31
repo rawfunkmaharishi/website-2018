@@ -25,6 +25,10 @@ h1 {
   margin: $padding;
 }
 
+h2 {
+  font-size: 1.2em;
+}
+
 a {
   color: map-get($theme-colors, primary);
 }

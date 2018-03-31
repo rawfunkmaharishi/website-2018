@@ -2,9 +2,21 @@
 title: Albums
 ---
 
-<dl class='row'>
+<div class='row'>
   {% for album in site.albums %}
-    <dt class='col-6'>{{ album.release_date | date: "%B %Y" }}</dt>
-    <dd class='col-6'><a href='{{ album.url }}'>{{ album.title }}</a></dd>
+  <div class='col-md'>
+    <a href='{{ album.url }}'>
+      <h2>{{ album.title }} - {{ album.release_date | date: "%B %Y" }}</h2>
+    </a>
+  </div>
+  <div class='col-md'>
+    <a href='{{ album.url }}'>
+      <img
+        src='/assets/album-covers/{{ album.title | lowercase }}.jpg'
+        alt='{{ page.title }}'
+        class='rounded mx-auto d-block img-fluid album-cover'
+      />
+    </a>
+  </div>
   {% endfor %}
-</dl>
+</div>
