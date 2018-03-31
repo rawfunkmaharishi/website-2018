@@ -1,11 +1,12 @@
 <div class="col-sm">
   <div class="embed-responsive embed-responsive-16by9 video">
-    <iframe class='embed-responsive-item'
-            src='//player.vimeo.com/video/{{ include.id }}'
-            data-toggle='tooltip'
-            data-html='true'
-            title='{{ include.title }}<br />License: {{ site.data.licenses[include.license].short-name }}'
-            allowfullscreen>
-    </iframe>
+    <iframe
+      class='embed-responsive-item rounded mx-auto d-block img-fluid'
+      src='//player.vimeo.com/video/{{ include.id }}'
+      data-toggle='tooltip'
+      data-html='true'
+      title='{{ include.title }}<br />License: {{ site.data.licenses[include.license].short-name }}'
+      allowfullscreen
+    ></iframe>
   </div>
 </div>
