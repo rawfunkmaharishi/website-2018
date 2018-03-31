@@ -2,16 +2,30 @@
 layout: default
 ---
 
+<p class='text-center'>{{ page.release_date | date: "%B %Y"  }}</p>
+<p class='text-center'> Available on
+  {% for outlet in page.outlets %}
+    <a href='{{ outlet.url }}'>{{ outlet.name }}</a>,
+  {% endfor %}
+  iTunes, BitTorrent and elsewhere
+</p>
+
 <div class='row'>
+
   <div class='col-md'>
-    <p>Released {{ page.release_date | date: "%B %Y"  }}</p>
-    <p> Available on
-      {% for outlet in page.outlets %}
-        <a href='{{ outlet.url }}'>{{ outlet.name }}</a>,
-      {% endfor %}
-      iTunes, BitTorrent and elsewhere
-    </p>
+    <div class="embed-responsive embed-responsive-16by9 video">
+      <iframe
+        class='rounded mx-auto d-block img-fluid'
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/videoseries?list={{ page.youtube_id }}"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
+
   <div class='col-md'>
     <a href='#' data-toggle="modal" data-target="#{{ page.title }}-modal">
       <img
@@ -21,9 +35,10 @@ layout: default
       />
     </a>
   </div>
+
   <div class='col-md'>
     <iframe
-    class='rounded mx-auto d-block spotify'
+      class='rounded mx-auto d-block spotify'
       src="https://open.spotify.com/embed/album/{{ page.spotify_id }}"
       width="300"
       height="350"
@@ -32,11 +47,17 @@ layout: default
       allow="encrypted-media"
     ></iframe>
   </div>
-  </div>
 </div>
 
 <!-- Modal -->
-<div class='modal' id='{{ page.title }}-modal' tabindex='-1' role='dialog' aria-labelledby='{{ page.title  }}-label' aria-hidden='true'>
+<div
+  class='modal'
+  id='{{ page.title }}-modal'
+  tabindex='-1'
+  role='dialog'
+  aria-labelledby='{{ page.title  }}-label'
+  aria-hidden='true'
+>
   <div class='modal-dialog modal-dialog-centered'>
     <div class='modal-content'>
       <div class='modal-body merch-logo'>
