@@ -240,3 +240,9 @@ dt {
   top: $banner-height + ($padding);
   font-size: 0.7em;
 }
+
+#archive {
+  dt, dd {
+    font-size: 0.8em;
+  }
+}
