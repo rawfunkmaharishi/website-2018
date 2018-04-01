@@ -2,12 +2,12 @@
 ---
 @import 'variables';
 @import 'colours';
-@import 'fonts';
 @import 'nav';
 @import 'assets';
 @import 'gigs';
 @import 'footer';
 @import 'bootstrap';
+@import 'fonts';
 
 body {
   background-color: lighten(map-get($theme-colors, secondary), 65%);
@@ -16,10 +16,6 @@ body {
 
 .container {
   padding-bottom: $footer-height;
-}
-
-p, dl, ul {
-  font-family: $font-primary;
 }
 
 p {
@@ -33,7 +29,6 @@ blockquote > p {
 h1, h2, h3, h4 {
   text-align: center;
   color: $dark-grey;
-  font-family: $font-primary;
   padding: $padding;
   font-weight: bold;
 }
@@ -95,7 +90,6 @@ svg.logo {
 }
 
 .btn {
- font-family: $font-primary;
  margin-bottom: $padding;
 }
 
