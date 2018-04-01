@@ -28,14 +28,3 @@ title: Sounds
       location = track.location %}
   {% endfor %}
 </div>
-
-<div class="row">
-  {% for track in site.data.soundcloud offset:6 limit:3 %}
-    {% include sound.html
-      title = track.title
-      id = track.id
-      date = track.date
-      license = track.license
-      location = track.location %}
-  {% endfor %}
-</div>
