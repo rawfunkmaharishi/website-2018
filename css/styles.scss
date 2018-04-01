@@ -5,7 +5,6 @@
 @import 'nav';
 @import 'assets';
 @import 'gigs';
-@import 'footer';
 @import 'bootstrap';
 @import 'fonts';
 
@@ -127,3 +126,5 @@ svg.logo {
     border: none;
   }
 }
+
+@import 'footer';
