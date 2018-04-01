@@ -1,8 +1,10 @@
 ---
 ---
+@import 'variables';
 
 body {
   margin-bottom: 0;
+  background-image: $background;
 }
 
 html, body, #splash-container {
