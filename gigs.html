@@ -44,61 +44,15 @@ $.each(gigs, function(index, gig) {
     nothingPlanned = false
     dt = '<dt class="col-6">' + date + '</dt>'
     dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
-    target = '#giglist'
-    $(target).append(dt + dd)
+    $('#giglist').append(dt + dd)
   } else {
     year = moment(gig.date).format('YYYY')
     arch = 'archive-' + year
     if (! $('#' + arch).length) {
-      $('#archive-links').append(`
-      <a
-        href='#'
-        data-toggle='modal'
-        data-target='#${ arch }-modal'>
-          ${ year }
-        </a>
-      `)
-      $('#archive').append(`
-        <div
-          class="modal fade"
-          id="${ arch }-modal"
-          tabindex="-1"
-          role="dialog"
-          aria-hidden="true">
-          <div
-            class="modal-dialog"
-            role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class='modal-title'>${ year } gigs</h2>
-              </div>
-              <div class="modal-body row" id='${ arch }'>
-              </div>
-              <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-dismiss="modal">
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      `)
+      $('#archive-links').append(yearLink(year))
+      $('#archive').append(yearModal(year))
     }
-    content = `
-    <div class='col-md'>
-      <div class='card'>
-        <h4>${ date }</h4>
-        <h3>
-          <a href="${ gig.url }">
-            ${ gig.title }
-          </a>
-        </h3>
-      </div>
-    </div>
-    `
-    $('#' + arch).append(content)
+    $('#' + arch).append(gigLink(gig))
   }
 
 })
@@ -111,7 +65,7 @@ if (nothingPlanned) {
 }
 
 function fancyDate(isoDate) {
-  format = 'Do MMMM YYYY'
+  format = 'Do MMMM'
   if (isFuture(isoDate)) {
     format = 'dddd Do MMMM'
   }
@@ -120,5 +74,61 @@ function fancyDate(isoDate) {
 
 function isFuture(date) {
   return moment().isBefore(date)
+}
+
+function yearLink(year) {
+  return `
+  <a
+    href='#'
+    data-toggle='modal'
+    data-target='#archive-${ year }-modal'>
+      ${ year }
+    </a>
+  `
+}
+
+function yearModal(year) {
+  return `
+  <div
+    class="modal fade"
+    id="archive-${ year }-modal"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true">
+    <div
+      class="modal-dialog"
+      role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class='modal-title'>${ year } gigs</h2>
+        </div>
+        <div class="modal-body row" id='archive-${ year }'>
+        </div>
+        <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-info"
+          data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+  `
+}
+
+function gigLink(gig) {
+  return `
+  <div class='col-xs'>
+    <div class='card'>
+      <h4>${ date }</h4>
+      <h3>
+        <a href="${ gig.url }">
+          ${ gig.title }
+        </a>
+      </h3>
+    </div>
+  </div>
+  `
 }
 </script>
