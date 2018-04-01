@@ -8,7 +8,7 @@ title: Sounds
 </p>
 
 <div class="row">
-  {% for track in site.data.soundcloud limit:2 %}
+  {% for track in site.data.soundcloud limit:3 %}
     {% include sound.html
       title = track.title
       id = track.id
@@ -19,7 +19,7 @@ title: Sounds
 </div>
 
 <div class="row">
-  {% for track in site.data.soundcloud offset:2 limit:3 %}
+  {% for track in site.data.soundcloud offset:3 limit:3 %}
     {% include sound.html
       title = track.title
       id = track.id
@@ -30,7 +30,7 @@ title: Sounds
 </div>
 
 <div class="row">
-  {% for track in site.data.soundcloud offset:5 limit:3 %}
+  {% for track in site.data.soundcloud offset:6 limit:3 %}
     {% include sound.html
       title = track.title
       id = track.id
