@@ -11,7 +11,67 @@
       </a>
     </li>
   {% endfor %}
+  <li class='list-inline-item'>
+    <a
+      href='#'
+      data-toggle='modal'
+      data-target='#background-credit-modal'>
+      <i
+        class='fas fa-camera-retro'
+        data-toggle='tooltip'
+        title='Image credit'></i>
+      </a>
+  </li>
 </ul>
+
+<!-- Modal -->
+<div
+  class='modal'
+  id='background-credit-modal'
+  tabindex='-1'
+  role='dialog'
+  aria-hidden='true'
+>
+  <div class='modal-dialog modal-dialog-centered'>
+    <div class='modal-content'>
+      <div class="modal-header">
+        <h2 class='modal-title'>
+          Background image:
+          <br />
+          <a href='{{ site.data.attributes.background-image.urls.photo }}'>
+            {{ site.data.attributes.background-image.title}}
+          </a> by
+          <a href='{{ site.data.attributes.background-image.photographer.url }}'>
+            {{ site.data.attributes.background-image.photographer.name }}
+          </a>
+          <br />
+          License:
+          <a href='{{ site.data.licenses[site.data.attributes.background-image.license].url }}'>
+            {{ site.data.licenses[site.data.attributes.background-image.license].short-name }}
+          </a>
+        </h2>
+      </div>
+      <div class='modal-body'>
+        <a href='{{ site.data.attributes.background-image.urls.photo }}'>
+          <img
+            src='{{ site.data.attributes.background-image.urls.small }}'
+            alt='{{ site.data.attributes.background-image.title}}'
+            class='mx-auto d-block img-fluid rounded'
+          />
+        </a>
+      </div>
+      <div class='modal-footer'>
+        <button
+          type='button'
+          class='btn btn-warning'
+          data-dismiss='modal'
+          aria-label='Close'>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 $(function () {

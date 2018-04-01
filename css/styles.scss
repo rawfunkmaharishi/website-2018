@@ -8,10 +8,6 @@
 @import 'bootstrap';
 @import 'fonts';
 
-body {
-  background-color: lighten(map-get($theme-colors, secondary), 65%);
-}
-
 .container {
   padding-bottom: $footer-height;
 }
@@ -50,7 +46,7 @@ dt {
 }
 
 a {
-  color: map-get($theme-colors, primary);
+  color: map-get($theme-colors, complement);
 }
 
 a, a:active, a:focus {
@@ -125,6 +121,10 @@ svg.logo {
   dd:last-child {
     border: none;
   }
+}
+
+.modal-title {
+  margin: 0 auto;
 }
 
 @import 'footer';
