@@ -41,7 +41,7 @@
     "priceCurrency": "{{ currency }}",
     "price": "{{ price }}",
     "availability": "{{ availability }}",
-    {% if include.url %}"url": "{{ include.url }}",{% endif %}
+    "url": "{% if include.url %}{{ include.url }}{% else %}http://rawfunkmaharishi.uk{{ page.url }}{% endif %}",
     "validFrom": "{{ include.date | date: '%Y-%m-%d' }}"
   }
 }]
