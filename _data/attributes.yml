@@ -17,3 +17,6 @@ background-image:
     name: timofticatalin
     url:  https://www.flickr.com/photos/95718647@N03/
   license: Attribution-2.0
+
+currencies:
+  £: GBP

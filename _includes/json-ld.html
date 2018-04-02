@@ -26,6 +26,16 @@
     "name" : "Raw Funk Maharishi",
     "sameAs" : "http://rawfunkmaharishi.uk/"
   }],
-  "image" : "http://rawfunkmaharishi.uk/assets/logos/social-image.png"
+  "image" : "http://rawfunkmaharishi.uk/assets/logos/social-image.png",
+  "offers" : {
+    {% assign price = 'free' %}
+    {% if include.price %}
+      {% assign amount = include.price | slice: 1, 100 %}
+      {% assign symbol = include.price | slice: 0, 1 %}
+      {% assign currency = site.data.attributes.currencies[symbol] %}
+      {% capture price %}{{ amount }}{{ currency }}{% endcapture %}
+    {% endif %}
+    "price": "{{ price }}"
+  }
 }]
 </script>
