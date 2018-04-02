@@ -1,11 +1,11 @@
 <div id='gig-clicker-container'>
-  <div class='throbber next-gig-slide-tab'></div>
+  <div id='throbber' class='throbber next-gig-slide-tab'></div>
   <div class='clickable' id='next-gig-clicker' onclick="showHide()">
     <i id='arrow' class='fas fa-exclamation-circle'></i>
   </div>
 </div>
 
-<div class='card next-gig-hide' id='next-gig'>foo</div>
+<div class='card' id='next-gig'></div>
 
 <script>
 function findGig() {
@@ -19,6 +19,7 @@ function findGig() {
     nextGig = (future[future.length - 1])
 
     if (nextGig) {
+      $('#gig-clicker-container').show()
       advertise(nextGig)
     }
   })
@@ -33,13 +34,16 @@ function advertise(gig) {
   `)
 }
 
+$('#gig-clicker-container').hide()
+
 findGig()
 
+$('#next-gig').hide()
 function showHide() {
-  if ($('#next-gig').hasClass('next-gig-hide')) {
-    $('#next-gig').removeClass('next-gig-hide').addClass('next-gig-show')
+  if ($('#next-gig').is(':visible')) {
+    $('#next-gig').hide('drop', { direction: "right" }, 500)
   } else {
-    $('#next-gig').removeClass('next-gig-show').addClass('next-gig-hide')
+    $('#next-gig').show('drop', { direction: "right" }, 500)
   }
 }
 </script>
