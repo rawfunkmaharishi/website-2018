@@ -1,22 +1,45 @@
-<div class='card' id="next-gig"></div>
+<div id='gig-clicker-container'>
+  <div class='throbber next-gig-slide-tab'></div>
+  <div class='clickable' id='next-gig-clicker' onclick="showHide()">
+    <i id='arrow' class='fas fa-exclamation-circle'></i>
+  </div>
+</div>
+
+<div class='card next-gig-hide' id='next-gig'>foo</div>
 
 <script>
-$.getJSON('/gigs.json', function(data) {
-  future = []
-  $.each(data.gigs, function(index, gig) {
-    if (isFuture(gig.date)) {
-      future.push(gig)
+function findGig() {
+  $.getJSON('/gigs.json', function(data) {
+    future = []
+    $.each(data.gigs, function(index, gig) {
+      if (isFuture(gig.date)) {
+        future.push(gig)
+      }
+    })
+    nextGig = (future[future.length - 1])
+
+    if (nextGig) {
+      advertise(nextGig)
     }
   })
-  nextGig = (future[future.length - 1])
-  if (nextGig) {
-    $('#next-gig').html(`
-        Next gig:
-        <a href='${ nextGig.url }'>
-          ${ fancyDate(nextGig.date) } at ${ nextGig.title }
-        </a>
-      `)
-  }
-})
+}
 
+function advertise(gig) {
+  $('#next-gig').html(`
+      Next gig:
+      <a href='${ nextGig.url }'>
+        ${ fancyDate(nextGig.date) } at ${ nextGig.title }
+      </a>
+  `)
+}
+
+findGig()
+
+function showHide() {
+  if ($('#next-gig').hasClass('next-gig-hide')) {
+    $('#next-gig').removeClass('next-gig-hide').addClass('next-gig-show')
+  } else {
+    $('#next-gig').removeClass('next-gig-show').addClass('next-gig-hide')
+  }
+}
 </script>
