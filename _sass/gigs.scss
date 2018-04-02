@@ -107,6 +107,10 @@
   opacity: $opacity;
 }
 
+#next-gig-clicker:hover {
+  opacity: $opacity * 2;
+}
+
 .throbber {
   width: $padding * 4;
   height: $padding * 4;
