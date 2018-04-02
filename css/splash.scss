@@ -1,8 +1,7 @@
 ---
 ---
-$background: url({{ site.data.attributes.background-image.urls.fullsize }});
 
-@import 'variables';
+$background: url({{ site.data.attributes.background-image.urls.fullsize }});
 
 body {
   margin-bottom: 0;

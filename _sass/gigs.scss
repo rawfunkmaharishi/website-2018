@@ -48,10 +48,22 @@
   height: 400px;
 }
 
+.map, .gig-map {
+  .svg-inline--fa {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+}
+
 .leaflet-control {
   text-align: right;
   a {
-    color: map-get($theme-colors, primary);
+    color: $link-color;
+  }
+
+  a:hover {
+    color: $link-hover;
+    text-decoration: none;
   }
 }
 

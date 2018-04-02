@@ -48,7 +48,7 @@ dt {
 }
 
 a {
-  color: map-get($theme-colors, complement);
+  color: $link-color;
 }
 
 a, a:active, a:focus {
@@ -57,7 +57,7 @@ a, a:active, a:focus {
 
 a:hover {
   text-decoration: none;
-  color: darken(map-get($theme-colors, primary), 25%);
+  color: $link-hover;
 }
 
 .tooltip-inner {

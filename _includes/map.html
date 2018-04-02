@@ -31,8 +31,11 @@
 	    ext: 'png'
     }).addTo(map)
 
-    var redMarker = L.AwesomeMarkers.icon({
-      markerColor: 'red'
+    var marker = L.AwesomeMarkers.icon({
+      markerColor: 'blue',
+      prefix: 'fa',
+      extraClasses: 'fas',
+      icon: 'music'
     });
 
     L.marker(
@@ -40,6 +43,6 @@
         {{ include.latitude }},
         {{ include.longitude }}
       ],
-      {icon: redMarker}
+      {icon: marker}
     ).addTo(map).bindPopup('{{ include.location | split: ',' | first }}').openPopup()
 </script>
