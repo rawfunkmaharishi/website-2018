@@ -1,5 +1,7 @@
 ---
 ---
+$background: url({{ site.data.attributes.background-image.urls.fullsize }});
+
 @import 'variables';
 @import 'colours';
 @import 'nav';
@@ -78,7 +80,8 @@ svg.logo {
 }
 
 .merch-logo {
-  background-color: map-get($theme-colors, primary);
+  background-image: $background;
+  background-position: center;
   padding: $padding;
   margin: $padding;
 }
@@ -88,13 +91,15 @@ svg.logo {
 }
 
 .btn-info, .btn-warning  {
-  background-color: map-get($theme-colors, primary);
+  // background-color: map-get($theme-colors, primary);
+  background-image: $background;
+  background-position: center;
   border: 0;
   color: white;
 }
 
 .btn-info:hover, .btn-warning:hover  {
-  background-color: darken(map-get($theme-colors, primary), 10%);
+  //background-color: darken(map-get($theme-colors, primary), 10%);
   color: $light-grey;
 }
 

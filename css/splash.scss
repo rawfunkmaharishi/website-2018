@@ -1,10 +1,13 @@
 ---
 ---
+$background: url({{ site.data.attributes.background-image.urls.fullsize }});
+
 @import 'variables';
 
 body {
   margin-bottom: 0;
   background-image: $background;
+  background-position: center;
 }
 
 html, body, #splash-container {
