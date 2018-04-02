@@ -1,14 +1,17 @@
 ---
 ---
+
 $background: url({{ site.data.attributes.background-image.urls.fullsize }});
 
 @import 'variables';
 @import 'colours';
-@import 'nav';
-@import 'assets';
-@import 'gigs';
+
 @import 'bootstrap';
 @import 'fonts';
+
+body {
+  color: $dark-grey;
+}
 
 .container {
   padding-bottom: $footer-height;
@@ -24,7 +27,6 @@ blockquote > p {
 
 h1, h2, h3, h4 {
   text-align: center;
-  color: $dark-grey;
   padding: $padding;
   font-weight: bold;
 }
@@ -133,3 +135,6 @@ svg.logo {
 }
 
 @import 'footer';
+@import 'nav';
+@import 'assets';
+@import 'gigs';
