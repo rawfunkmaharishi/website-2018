@@ -3,6 +3,8 @@
 
 $background: url({{ site.data.attributes.background-image.urls.fullsize }});
 
+@import 'mixins';
+
 body {
   margin-bottom: 0;
   background-image: $background;

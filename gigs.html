@@ -23,58 +23,38 @@ title: Gigs
 <div id='archive'></div>
 
 <script>
-gigs = [
-  {% for gig in site.categories.gigs %}
-  {
-    'title': '{{ gig.title }}',
-    'date': '{{ gig.date | date: "%Y-%m-%d" }}',
-    'url': '{{ gig.url }}'
-  },
-  {% endfor %}
-]
-
 nothingPlanned = true
-$.each(gigs, function(index, gig) {
-  date = fancyDate(gig.date)
+$.getJSON('/gigs.json', function(data) {
+  $.each(data.gigs, function(index, gig) {
+    date = fancyDate(gig.date)
 
-  dt = '<dt class="col-6">' + date + '</dt>'
-  dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
-
-  if (isFuture(gig.date)) {
-    nothingPlanned = false
     dt = '<dt class="col-6">' + date + '</dt>'
     dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
-    $('#giglist').append(dt + dd)
-  } else {
-    year = moment(gig.date).format('YYYY')
-    arch = 'archive-' + year
-    if (! $('#' + arch).length) {
-      $('#archive-links').append(yearLink(year))
-      $('#archive').append(yearModal(year))
+
+    if (isFuture(gig.date)) {
+      nothingPlanned = false
+      dt = '<dt class="col-6">' + date + '</dt>'
+      dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
+      $('#giglist').append(dt + dd)
+    } else {
+      year = moment(gig.date).format('YYYY')
+      arch = 'archive-' + year
+      if (! $('#' + arch).length) {
+        $('#archive-links').append(yearLink(year))
+        $('#archive').append(yearModal(year))
+      }
+      $('#' + arch).append(gigLink(gig))
     }
-    $('#' + arch).append(gigLink(gig))
-  }
 
+  })
+
+  if (nothingPlanned) {
+    $(`<p class="text-center">
+      Nothing in the calendar. Why not
+      <a href="/book-the-band/">book us?</a></p>
+    `).insertBefore('#giglist')
+  }
 })
-
-if (nothingPlanned) {
-  $(`<p class="text-center">
-    Nothing in the calendar. Why not
-    <a href="/book-the-band/">book us?</a></p>
-  `).insertBefore('#giglist')
-}
-
-function fancyDate(isoDate) {
-  format = 'Do MMMM'
-  if (isFuture(isoDate)) {
-    format = 'dddd Do MMMM'
-  }
-  return moment(isoDate).format(format)
-}
-
-function isFuture(date) {
-  return moment().isBefore(date)
-}
 
 function yearLink(year) {
   return `

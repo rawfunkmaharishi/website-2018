@@ -27,15 +27,7 @@ body {
     @extend .list-inline;
   }
 
-  a {
-    color: white;
-    opacity: $opacity;
-  }
-
-  a:hover {
-    opacity: $opacity * 2;
-    text-decoration: none;
-  }
+  @include white-link;
 }
 
 #splash-footer {

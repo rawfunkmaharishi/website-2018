@@ -1,0 +1,22 @@
+<div class='card' id="next-gig"></div>
+
+<script>
+$.getJSON('/gigs.json', function(data) {
+  future = []
+  $.each(data.gigs, function(index, gig) {
+    if (isFuture(gig.date)) {
+      future.push(gig)
+    }
+  })
+  nextGig = (future[future.length - 1])
+  if (nextGig) {
+    $('#next-gig').html(`
+        Next gig:
+        <a href='${ nextGig.url }'>
+          ${ fancyDate(nextGig.date) } at ${ nextGig.title }
+        </a>
+      `)
+  }
+})
+
+</script>

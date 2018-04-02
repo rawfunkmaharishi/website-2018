@@ -5,9 +5,9 @@ $background: url({{ site.data.attributes.background-image.urls.fullsize }});
 
 @import 'variables';
 @import 'colours';
-
 @import 'bootstrap';
 @import 'fonts';
+@import 'mixins';
 
 body {
   color: $dark-grey;

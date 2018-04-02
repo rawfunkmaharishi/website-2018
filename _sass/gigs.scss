@@ -78,3 +78,16 @@
     content: none;
   }
 }
+
+#next-gig {
+  background-color: $grey;
+  border: 1px solid $dark-grey;
+  position: absolute;
+  right: $padding;
+  bottom: $padding + $footer-height;
+  font-size: 0.7em;
+  padding: $padding;
+  color: white;
+  opacity: $opacity * 2;
+  @include white-link;
+}

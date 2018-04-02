@@ -1,0 +1,15 @@
+---
+layout:
+---
+{
+  "gigs": [
+    {% for gig in site.categories.gigs %}
+    {
+      "title": "{{ gig.title }}",
+      "date": "{{ gig.date | date: "%Y-%m-%d" }}",
+      "location": "{{ gig.location }}",
+      "url": "{{ gig.url }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
