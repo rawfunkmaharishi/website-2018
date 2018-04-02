@@ -5,7 +5,7 @@
   "name" : "Raw Funk Maharishi live at {{ include.title }}",
   "description" : "Raw Funk Maharishi live at {{ include.title }}",
   "startDate" : "{{ include.date | date: "%Y-%m-%d" }}T{{ include.time }}",
-  "endDate" : "{{ include.date | date: "%Y-%m-%d" }}T{{ include.time }}",
+  "endDate" : "{{ include.date | date: "%Y-%m-%d" }}T{{ include.time | split: ':' | first | plus: 2 }}:{{ include.time | split: ':' | last }}",
   "location" : {
     "@type" : "Place",
     "name" : "{{ include.title }}",
@@ -29,15 +29,22 @@
   "image" : "http://rawfunkmaharishi.uk/assets/logos/social-image.png",
   "offers" : {
     {% assign price = 0 %}
-    {% assign currency = '' %}
+    {% assign currency = 'GBP' %}
+    {% assign availability = 'Not relevant' %}
+
     {% if include.price %}
-      {% assign amount = include.price | slice: 1, 100 %}
+      {% assign price = include.price | slice: 1, 100 %}
       {% assign symbol = include.price | slice: 0, 1 %}
       {% assign currency = site.data.attributes.currencies[symbol] %}
-      {% capture price %}{{ amount }}{% endcapture %}
-      "priceCurrency": "{{ currency }}",
+      {% assign availability = "Pay on the door" %}
     {% endif %}
-    "price": "{{ price }}"
+    "priceCurrency": "{{ currency }}",
+    "price": "{{ price }}",
+    "availability": "{{ availability }}",
+    {% if include.url %}"url": "{{ include.url }}",{% endif %}
+    "validFrom": "{{ include.date | date: '%Y-%m-%d' }}"
   }
 }]
 </script>
+
+{{ site.baseurl }}
