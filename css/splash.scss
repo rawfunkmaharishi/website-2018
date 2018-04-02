@@ -8,7 +8,7 @@ $background: url({{ site.data.attributes.background-image.urls.fullsize }});
 body {
   margin-bottom: 0;
   background-image: $background;
-  background-position: center;
+  background-position: left;
 }
 
 html, body, #splash-container {

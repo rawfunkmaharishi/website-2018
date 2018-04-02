@@ -83,7 +83,7 @@ svg.logo {
 
 .merch-logo {
   background-image: $background;
-  background-position: center;
+  background-position: right;
   padding: $padding;
   margin: $padding;
 }
@@ -93,9 +93,8 @@ svg.logo {
 }
 
 .btn-info, .btn-warning  {
-  // background-color: map-get($theme-colors, primary);
   background-image: $background;
-  background-position: center;
+  background-position: left;
   border: 0;
   color: white;
 }
