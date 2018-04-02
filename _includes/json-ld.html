@@ -35,9 +35,9 @@
       {% assign symbol = include.price | slice: 0, 1 %}
       {% assign currency = site.data.attributes.currencies[symbol] %}
       {% capture price %}{{ amount }}{% endcapture %}
+      "priceCurrency": "{{ currency }}",
     {% endif %}
-    "price": "{{ price }}",
-    "priceCurrency": "{{ currency }}"
+    "price": "{{ price }}"
   }
 }]
 </script>
