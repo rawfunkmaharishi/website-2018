@@ -1,0 +1,39 @@
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "MusicEvent",
+    "name": "Raw Funk Maharishi live at Hoxton Underbelly",
+    "description": "Raw Funk Maharishi live at Hoxton Underbelly",
+    "startDate": "2018-05-01T20:30",
+    "endDate": "2018-05-01T22:30",
+    "location": {
+      "@type": "Place",
+      "name": "Hoxton Underbelly",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "United Kingdom",
+        "streetAddress": "Zigfrid von Underbelly, 11 Hoxton Square, N1 6NU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "51.527817",
+        "longitude": "-0.08171"
+      }
+    },
+    "performer": [
+      {
+        "@type": "MusicGroup",
+        "name": "Raw Funk Maharishi",
+        "sameAs": "http://rawfunkmaharishi.uk/"
+      }
+    ],
+    "image": "http://rawfunkmaharishi.uk/assets/logos/social-image.png",
+    "offers": {
+      "priceCurrency": "GBP",
+      "price": "0",
+      "availability": "Not relevant",
+      "url": "http://rawfunkmaharishi.uk/gigs/2018/05/01/hoxton-underbelly/",
+      "validFrom": "2018-05-01"
+    }
+  }
+]

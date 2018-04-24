@@ -1,0 +1,11 @@
+$grey: rgb(127, 127, 127);
+$light-grey: lighten($grey, 25%);
+$dark-grey: darken($grey, 10%);
+
+$brand-white: white;
+$brand-black: black;
+
+$link-color: $brand-white;
+$link-hover: $brand-complement;
+
+$text-colour: $grey;

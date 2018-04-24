@@ -1,113 +1,89 @@
 ---
 title: Gigs
+subtitle: |
+  <a
+    class='cal-subscribe'
+    data-target='#calendar-subscribe-modal'
+    data-toggle='modal'
+    href='#'
+    >
+    <i
+      class='fas fa-calendar-alt'
+      ></i>
+  </a>
 ---
 
-<a
-  href='/calendar.ics'
-  class='btn btn-info cal-subscribe'
-
-  title='Add our gig schedule to your calendar'>
-  Gig calendar
-</a>
-
-<h2>Upcoming</h2>
-<dl
-  id='giglist'
-  class='row'></dl>
-
-<h2>Archive</h2>
 <div
-  id='archive-links'
-  class='text-center'></div>
-<div id='archive'></div>
+  class='gig-lists'
+  >
+  <ul
+    id='future-gigs'
+    ></ul>
+
+  <hr>
+
+  <ul
+    class='gig-archive'
+    id='gig-archive'
+    ></ul>
+</div>
+
+<hr>
+
+{% include modals/calendar-subscribe-modal.html %}
+{% include fragments/book-the-band.html %}
 
 <script>
 nothingPlanned = true
+height = window.innerHeight
+
 $.getJSON('/gigs.json', function(data) {
   $.each(data.gigs, function(index, gig) {
     date = fancyDate(gig.date)
 
-    dt = '<dt class="col-6">' + date + '</dt>'
-    dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
+    item = `
+    <li
+      id='${ gig.date }'
+      >
+      <span
+        class='gig-date'
+        >${ date }:</span>
+      <a
+        href='${ gig.url }'
+        title='${ gig.title }, ${ date }'
+        >
+          ${ gig.title }
+        </a>
+      </li>`
 
     if (isFuture(gig.date)) {
       nothingPlanned = false
-      dt = '<dt class="col-6">' + date + '</dt>'
-      dd = '<dd class="col-6"><a href="' + gig.url + '">' + gig.title + '</a></dd>'
-      $('#giglist').append(dt + dd)
+      target = '#future-gigs'
+      $(target).prepend(item)
     } else {
-      year = moment(gig.date).format('YYYY')
-      arch = 'archive-' + year
-      if (! $('#' + arch).length) {
-        $('#archive-links').append(yearLink(year))
-        $('#archive').append(yearModal(year))
-      }
-      $('#' + arch).append(gigLink(gig))
+      target = '#gig-archive'
+      $(target).append(item)
+      initialTop = $('#gig-archive > li')[0].getBoundingClientRect().bottom
+      opacify($(`#${ gig.date }`))
     }
-
   })
 
   if (nothingPlanned) {
-    $(`<p class="text-center">
+    $('#future-gigs').append(`
+    <li>
       Nothing in the calendar. Why not
-      <a href="/book-the-band/">book us?</a></p>
-    `).insertBefore('#giglist')
+      <a
+        href='/book-the-band/'
+        >book us?</a>
+    </li>
+    `)
   }
 })
 
-function yearLink(year) {
-  return `
-  <a
-    href='#'
-    data-toggle='modal'
-    data-target='#archive-${ year }-modal'>
-      ${ year }
-    </a>
-  `
-}
-
-function yearModal(year) {
-  return `
-  <div
-    class="modal fade"
-    id="archive-${ year }-modal"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true">
-    <div
-      class="modal-dialog"
-      role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class='modal-title'>${ year } gigs</h2>
-        </div>
-        <div class="modal-body row" id='archive-${ year }'>
-        </div>
-        <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-info"
-          data-dismiss="modal">
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-  `
-}
-
-function gigLink(gig) {
-  return `
-  <div class='col-xs col-md'>
-    <div class='card'>
-      <h4>${ date }</h4>
-      <h3>
-        <a href="${ gig.url }">
-          ${ gig.title }
-        </a>
-      </h3>
-    </div>
-  </div>
-  `
-}
+element = '#gig-archive > li'
+$(window).on({
+  'scroll': function(e) {
+    fadeOut(element)
+  }
+})
 </script>

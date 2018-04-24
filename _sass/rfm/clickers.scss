@@ -1,0 +1,16 @@
+.clickable {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: $link-color;
+  z-index: 99;
+}
+
+.clickable:hover {
+  color: $link-hover;
+}
+
+.nav-clicker {
+  position: fixed;
+  top: $padding * 2;
+  right: $padding * 2;
+}

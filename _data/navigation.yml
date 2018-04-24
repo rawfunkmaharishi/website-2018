@@ -1,26 +1,26 @@
 - title: Band
-  path:  the-band/
+  path:  /the-band/
 
-- title: Sounds
-  path:  sounds/
+- title: Music
+  path:  /albums/
 
 - title: Pictures
-  path:  pictures/
+  path:  /pictures/
 
-- title: Videos
-  path:  videos/
+# - title: Videos
+#   path:  /videos/
 
 - title: Gigs
-  path:  gigs/
+  path:  /gigs/
 
 - title: Bookings
-  path:  book-the-band/
-
-- title: Reviews
-  path:  feedback/
-
+  path:  /book-the-band/
+#
+# - title: Reviews
+#   path:  /feedback/
+#
 - title: Merch
-  path:  merchandise/
+  path:  /merchandise/
 
 # - title: Licensing
 #   path:  /licensing/

@@ -1,0 +1,67 @@
+{% capture description %}Raw Funk Maharishi: {{ site.data.attributes.straplines[1] }}{% endcapture %}
+{% capture url_start %}{{ page.url | slice: 0, 8 }}{% endcapture %}
+{% if url_start == '/gigs/20' %}
+  {% capture title %}Raw Funk Maharishi LIVE at {{ page.title }}, {{ page.location | split:',' | first }} on {{ page.date | date_to_long_string }} at {{ page.time }}{% endcapture %}
+  {% capture description %}Raw Funk Maharishi LIVE at {{ page.title }}, {{ page.location }} on {{ page.date | date_to_long_string }} at {{ page.time }}{% endcapture %}
+{% elsif url_start == '/albums/' and page.url != '/albums/' %}
+  {% capture title %}Raw Funk Maharishi » {{ page.title }} ({{ page.release_date | date: '%B %Y' }}){% endcapture %}
+{% elsif page.title == 'Raw Funk Maharishi' %}
+  {% capture title %}Raw Funk Maharishi{% endcapture %}
+{% else %}
+  {% capture title %}Raw Funk Maharishi » {{ page.title }}{% endcapture %}
+{% endif %}
+
+{% assign social_site = site.url %}
+{% assign social_site_name = 'Raw Funk Maharishi' %}
+
+<!-- OpenGraph -->
+<meta
+  content='{{ title }}'
+  property='og:title'
+  />
+<meta
+  content='{{ social_site_name }}'
+  property='og:site_name'
+  />
+<meta
+  content='{{ social_site }}{{ page.url }}'
+  property='og:url'
+  />
+<meta
+  content='{{ description }}'
+  property='og:description'
+  />
+<meta
+  content='article'
+  property='og:type'
+  />
+<meta
+  content='{{ social_site }}/assets/logos/social-image.png'
+  property='og:image'
+  />
+
+<!-- Twitter Card -->
+<meta
+  content='summary'
+  name='twitter:card'
+  />
+<meta
+  content='@uncookedfunk'
+  name='twitter:site'
+  />
+<meta
+  content='{{ title }}'
+  name='twitter:title'
+  />
+<meta
+  content='{{ description }}'
+  name='twitter:description'
+  />
+<meta
+  content='{{ social_site }}/assets/logos/social-image.png'
+  name='twitter:image'
+  />
+<meta
+  content='{{ social_site }}{{ page.url }}'
+  name='twitter:url'
+  />

@@ -1,0 +1,48 @@
+<ul
+  class='nav flex-column'
+  id='nav'
+  >
+  {% for item in site.data.navigation %}
+    <li
+      class='nav-item'
+      >
+      <a
+        href='{{ item.path }}'
+        >
+        {{ item.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+<div
+  class='clickable nav-clicker'
+  id='nav-clicker'
+  onclick='showHideNav()'
+  >
+  <i
+    class='fas fa-ellipsis-v'
+    ></i>
+</div>
+
+<script>
+nav = '#nav'
+navtoggle = '#nav-clicker > svg'
+effect = 'drop'
+$(nav).hide()
+
+function showHideNav() {
+  if ($(nav).is(':visible')) {
+    $(nav).hide(effect, { direction: 'right' }, 500)
+  } else {
+    $(nav).show(effect, { direction: 'right' }, 500)
+  }
+}
+
+// https://codepen.io/alexgill/pen/EWWojp
+$(document).mouseup(function (e) {
+ if (! $('#nav').is(e.target)) {
+    $(nav).hide(effect, { direction: 'right' }, 500)
+  }
+});
+</script>

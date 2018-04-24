@@ -1,0 +1,13 @@
+open-content: |
+  All creative works on this site, including [audio](/sounds), [video](/videos), [photos](/pictures), [logos](/merchandise) and [blog posts](/blog) are [Creative Commons](https://creativecommons.org/licenses/)-licensed. This means that you are free to reuse and remix them, subject to the restrictions outlined [here](https://creativecommons.org/licenses/). See individual pages or items for specific licensing terms
+
+open-source: |
+  This site is built using the [Jekyll](http://jekyllrb.com/) framework, and styled with the help of [Twitter Bootstrap](http://getbootstrap.com/), both of which are [MIT-licensed](http://opensource.org/licenses/MIT). The media on this site was curated using our own [MIT-licensed](https://github.com/rawfunkmaharishi/purdie/blob/master/LICENSE.md) Rubygem, [Purdie](http://sam.pikesley.org/projects/purdie/). The entire source is available on [Github](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io), also under the [MIT license](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/LICENSE.md)
+
+open-maps: |
+  This site uses maps from [OpenStreetMap](http://www.openstreetmap.org/copyright), licensed under the [Open Data Commons Open Database License](http://opendatacommons.org/licenses/odbl/) (ODbL) by the [OpenStreetMap Foundation](http://osmfoundation.org/) (OSMF). The cartography in the [Stamen](http://stamen.com/) map tiles is licensed under the [Creative Commons Attribution 3.0](http://creativecommons.org/licenses/by/3.0/) license (CC BY)
+
+open-data: |
+  This site [publishes data](/blog/2015/01/19/linking-data/) about Raw Funk Maharishi [gigs](/gigs) as [Open Data](http://theodi.org/guides/what-open-data). This data is made available under a [Creative Commons Attribution Share-alike license](http://creativecommons.org/licenses/by-sa/4.0/)
+
+  There is also a completely open [JSON API](http://data.rawfunkmaharishi.uk/), offering data about the band in machine-readable form

@@ -15,7 +15,8 @@ latitude:    {where in the world}
 longitude:   {is your place located?}
 
 # optional fields
-price:       {with currency symbol}
+price:       {just an amount}
+currency:    {three-letter representation, but only if anything other than GBP}
 facebook_id: {if you have an FB event}
 other_bands:
   - name: {some other band appearing at the show}

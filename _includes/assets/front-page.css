@@ -1,0 +1,14 @@
+body {
+  background-image: url({{ site.data.attributes.background-image.urls.large }});
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin-bottom: 0;
+}

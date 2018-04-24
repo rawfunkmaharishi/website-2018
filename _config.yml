@@ -31,3 +31,8 @@ collections:
 
 permalink: pretty
 future: true
+
+url: http://rawfunkmaharishi.uk
+exclude:
+  - scripts
+  - spec

@@ -26,7 +26,7 @@ I strapped on the bamboo headphones and Cargo-Culted my way to [this](https://gi
 
 ## How to use it
 
-As you can see from [this](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/_layouts/gig.html# L37-L39), you can embed a map with simple call like this:
+As you can see from [this](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/_layouts/gig.html#L37-L39), you can embed a map with simple call like this:
 
 {% raw %}
 ```

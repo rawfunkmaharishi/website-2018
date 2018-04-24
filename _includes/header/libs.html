@@ -1,0 +1,26 @@
+{% for lib in site.data.libs.css %}
+<!-- {{ lib.name }} -->
+<link
+  crossorigin='anonymous'
+  href='{{ lib.url }}'
+  integrity='{{ lib.hash }}'
+  rel='stylesheet'
+  >
+{% endfor %}
+
+{% for font in site.data.libs.fonts %}
+<!-- {{ font.name }} -->
+<link
+  href='{{ font.url }}'
+  rel='stylesheet'
+  >
+{% endfor %}
+
+{% for lib in site.data.libs.js %}
+<!-- {{ lib.name }} -->
+<script
+  crossorigin='anonymous'
+  integrity='{{ lib.hash }}'
+  src='{{ lib.url }}'
+  ></script>
+{% endfor %}

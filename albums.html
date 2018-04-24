@@ -1,18 +1,34 @@
 ---
-title: Albums
+title: Music
 ---
 
-<div class='row'>
-  {% assign albums = site.albums | sort: 'release_date' %}
+<div
+  class='row'
+  >
+  {% assign albums = site.albums | sort: 'release_date' | reverse %}
   {% for album in albums %}
-    <div class='col-md'>
-      <a href='{{ album.url }}'>
+    <div
+      class='col-md album'
+      >
+      <a
+        href='{{ album.url }}'
+        >
         <img
+          alt='{{ album.title }}'
           src='/assets/album-covers/{{ album.cover_image }}'
-          alt='{{ page.title }}'
-          class='rounded mx-auto d-block img-fluid album-cover'
         />
+        <h2>{{ album.title }}</h2>
+        <h3>{{ album.release_date | date: '%Y' }}</h3>
       </a>
     </div>
   {% endfor %}
 </div>
+
+<hr>
+
+<p>
+  Or check out some
+  <a
+    href='/sounds/'
+    >Rehearsal recordings</a>
+</p>

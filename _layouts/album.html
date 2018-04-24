@@ -2,77 +2,72 @@
 layout: default
 ---
 
-<p class='text-center'>{{ page.release_date | date: "%B %Y"  }}</p>
-<p class='text-center'> Available on
+<h2>{{ page.release_date | date: '%B %Y' }}</h2>
+<p> Available on
+  <a
+    data-target='#youtube-modal'
+    data-toggle='modal'
+    href='#'
+    ><i
+      class='music-service {{ site.data.attributes.music-services.youtube.font-awesome }}'
+      ></i>&nbsp;YouTube</a>,
+  <a
+    data-toggle='modal'
+    data-target='#spotify-modal'
+    href='#'
+    ><i
+      class='music-service {{ site.data.attributes.music-services.spotify.font-awesome }}'
+      ></i>&nbsp;Spotify</a>,
   {% for outlet in page.outlets %}
-    <a href='{{ outlet.url }}'>{{ outlet.name }}</a>,
+    <a
+      href='{{ outlet.url }}'
+      ><i
+        class='music-service {{ site.data.attributes.music-services[outlet.name].font-awesome }}'
+        ></i>&nbsp;{% assign words = outlet.name | split: '-' %}{% for word in words %}{{ word | capitalize }}{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}</a>,
   {% endfor %}
   iTunes, BitTorrent and elsewhere
 </p>
 
-<div class='row'>
+<a
+  data-target='#{{ page.title }}-modal'
+  data-toggle='modal'
+  href='#'
+  >
+  <img
+    alt='{{ page.title }}'
+    src='/assets/album-covers/{{ page.cover_image }}'
+  />
+</a>
 
-  <div class='col-md'>
-    <div class="embed-responsive embed-responsive-16by9 video">
-      <iframe
-        class='embed-responsive-item rounded mx-auto d-block img-fluid'
-        width="560"
-        height="315"
-        src="//www.youtube.com/embed/videoseries?list={{ page.youtube_id }}"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-
-  <div class='col-md'>
-    <a
-      href='#'
-      data-toggle='modal'
-      data-target='#{{ page.title }}-modal'>
-      <img
-        src='/assets/album-covers/{{ page.cover_image }}'
-        alt='{{ page.title }}'
-        class='rounded mx-auto d-block img-fluid album-cover'
-      />
-    </a>
-  </div>
-
-  <div class='col-md'>
-    <iframe
-      class='rounded mx-auto d-block spotify'
-      src="https://open.spotify.com/embed/album/{{ page.spotify_id }}"
-      width="300"
-      height="350"
-    ></iframe>
-  </div>
-</div>
-
-<!-- Modal -->
+{% capture yt-body %}
 <div
-  class='modal'
-  id='{{ page.title }}-modal'
-  tabindex='-1'
-  role='dialog'
-  aria-hidden='true'
->
-  <div class='modal-dialog modal-dialog-centered'>
-    <div class='modal-content'>
-      <div class='modal-body'>
-        <img
-          src='/assets/album-covers/{{ page.cover_image }}'
-          alt='{{ page.title }}'
-          class='mx-auto d-block img-fluid rounded'
-        />
-      </div>
-      <div class='modal-footer'>
-        <button
-          type='button'
-          class='btn btn-warning'
-          data-dismiss='modal'
-          aria-label='Close'>
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
+  class='embed-responsive embed-responsive-16by9'
+  >
+  <iframe
+    allowfullscreen
+    src='//www.youtube.com/embed/videoseries?list={{ page.youtube_id }}'
+  ></iframe>
 </div>
+{% endcapture %}
+{%
+  include modals/album-modal.html
+    body = yt-body
+    name = 'youtube'
+%}
+
+{% capture spotify-body %}
+<div
+  class='embed-responsive embed-responsive-16by9'
+  >
+  <iframe
+    src='//open.spotify.com/embed/album/{{ page.spotify_id }}'
+  ></iframe>
+</div>
+{% endcapture %}
+{%
+  include modals/album-modal.html
+    body = spotify-body
+    name = 'spotify'
+%}
+
+{% include fragments/json-ld-record.html %}

@@ -1,120 +1,69 @@
 ---
 title: Merch
 merch:
+  - 2018/rfm.png
   - 2017/wide.png
   - 2017/square.png
   - 2014/wide.png
   - 2014/stacked.png
 ---
 
-<p class='text-center'>
-  We don't currently have the capacity to sell our t-shirts.
-  However, you can make your own...
-</p>
+<article>
+<p>We don't currently have the capacity to sell our t-shirts.
+  However, you can make your own...</p>
 
-<h2>
-  First, download one of our
+<h2>First, download one of our
   (<a
     href='https://creativecommons.org/licenses/by-nc-sa/4.0'
-    data-toggle='tooltip'
-    data-html='true'
-    title='Creative Commons<br />Attribution-NonCommercial-ShareAlike'>
-    cc-licensed
-  </a>)
-  logos
-</h2>
+    title='Creative Commons Attribution-NonCommercial-ShareAlike'>cc-licensed</a>)
+  logos</h2>
 
-<div class="row">
+<div
+  class='row'
+  >
   {% for item in page.merch %}
     {% capture name %}{{ item | split: '.' | first | replace: '/', '-' }}{% endcapture %}
     {% capture path %}/assets/logos/{{ item }}{% endcapture %}
-    <div class='col-sm card merch-logo'>
+    <div
+      class='col-sm card merch-logo'
+      >
       <a
         href='#'
-        data-toggle="modal"
-        data-target="#{{ name }}-modal">
+        data-target='#{{ name }}-modal'
+        data-toggle='modal'
+        >
         <img
-          src='{{ path }}'
           alt='{{ name }}'
-          class='mx-auto d-block img-fluid'
+          src='{{ path }}'
         />
       </a>
     </div>
 
-      <!-- Modal -->
-      <div
-        class='modal'
-        id='{{ name }}-modal'
-        tabindex='-1'
-        role='dialog'
-        aria-hidden='true'>
-        <div class='modal-dialog modal-dialog-centered'>
-          <div class='modal-content'>
-            <div class='modal-body merch-logo rounded'>
-              <img
-                src='{{ path }}'
-                alt='{{ name }}'
-                class='mx-auto d-block img-fluid'
-              />
-            </div>
-            <div class='modal-footer'>
-              <button
-                type='button'
-                class='btn btn-warning'
-                data-dismiss='modal'
-                aria-label='Close'>
-                Close
-              </button>
-              {% assign parts = path | split: '/' %}
-              {% capture dl_path %}{{ parts[-2] }}-{{ parts[-1] }}{% endcapture %}
-              <a
-                href="{{ path }}"
-                download="{{ dl_path }}"
-                class='btn btn-info'>
-                Download
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    {%
+      include modals/merch-modal.html
+        name = name
+        path = path
+    %}
 
   {% endfor %}
 </div>
 
 <h2>Then</h2>
 
-  <ul>
-    <li>
-      Head over to <a href='http://www.streetshirts.co.uk/en-gb/creation'>
-        Streetshirts</a>
-    </li>
-    <li>
-      Select 'Upload image' down the left-hand side
-    </li>
-    <li>
-      Agree to the terms and conditions
-    </li>
-    <li>
-      Select the logo you downloaded above
-    </li>
-    <li>
-      No, you don't want to vectorise your image
-    </li>
-    <li>
-      The image should now be there under 'Assets' on the right-hand side
-    </li>
-    <li>
-      Design some merch!
-    </li>
-  </ul>
+<ul>
+  <li>Head over to <a href='http://www.streetshirts.co.uk/en-gb/creation'>
+      Streetshirts</a></li>
+  <li>Select 'Upload image' down the left-hand side</li>
+  <li>Agree to the terms and conditions</li>
+  <li>Select the logo you downloaded above</li>
+  <li>No, you don't want to vectorise your image</li>
+  <li>The image should now be there under 'Assets' on the right-hand side</li>
+  <li>Design some merch!</li>
+</ul>
 
-  <p>
-    If you do create some merch of your own, <em>please</em> send us a photo
-    of you wearing it
-  </p>
-  <p>
-    Also, please note that we are not affiliated with Streetshirts in any way,
-    we've just been extremely impressed with their rapid delivery of
-    high-quality t-shirts
-  </p>
+<p>If you do create some merch of your own, <em>please</em> send us a photo
+  of you wearing it</p>
+<p>Also, please note that we are not affiliated with Streetshirts in any way,
+  we've just been extremely impressed with their rapid delivery of
+  high-quality t-shirts</p>
+</article>
