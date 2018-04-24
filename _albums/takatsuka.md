@@ -2,6 +2,10 @@
 title: Takatsuka
 cover_image: takatsuka.jpg
 release_date: 2016-04-22
+type: Album
+location:
+  name: Rogue Studios
+  url:  http://www.roguestudios.co.uk/
 tracks:
   - Siren
   - Blessed Love
