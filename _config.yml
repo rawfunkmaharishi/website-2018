@@ -36,3 +36,5 @@ url: http://rawfunkmaharishi.uk
 exclude:
   - scripts
   - spec
+include:
+  - .well-known
