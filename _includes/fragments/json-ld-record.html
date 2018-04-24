@@ -1,7 +1,36 @@
 <script type="application/ld+json">
-[{
+{
   "@context" : "http://schema.org",
   "@type" : "MusicAlbum",
-  "foobar": "this should fail"
-}]
+  "name": "{{ page.title }}",
+  "sameAs": "http://rawfunkmaharishi.uk/albums/{{ page.title | slugify }}",
+  "image": "http://rawfunkmaharishi.uk/assets/album-covers/{{ page.cover_image }}",
+  "albumProductionType": "Studio Recording",
+  "albumReleaseType": "{{ page.type }}",
+  "datePublished": "{{ page.date }}",
+  "locationCreated": {
+    "name": "{{ page.location.name }}",
+    "sameAs": "{{ page.location.url }}"
+  },
+  {% if page.producer %}
+  "producer": {
+    "name": "{{ page.producer.name }}",
+    "sameAs": "{{ page.producer.url }}"
+  },
+  {% endif %}
+  "byArtist": {
+    "@type" : "MusicGroup",
+    "name" : "Raw Funk Maharishi",
+    "sameAs" : "http://rawfunkmaharishi.uk/"
+  },
+  "numTracks" : {{ page.tracks.size }},
+  "track": [
+    {% for track in page.tracks %}
+    {
+      "@type": "MusicRecording",
+      "name": "{{ track }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
 </script>
