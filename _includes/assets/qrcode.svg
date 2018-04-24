@@ -5,7 +5,7 @@
 	xmlns='http://www.w3.org/2000/svg'
 	>
 	<title>QR Code</title>
-	<desc>http://rawfunkmaharishi.uk/</desc>
+	<desc>{{ site.url }}/</desc>
 	<rect
 		class='ground'
 		height='250'

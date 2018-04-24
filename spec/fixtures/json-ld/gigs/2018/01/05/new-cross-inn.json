@@ -1,39 +1,35 @@
-[
-  {
-    "@context": "http://schema.org",
-    "@type": "MusicEvent",
-    "name": "Raw Funk Maharishi live at New Cross Inn",
-    "description": "Raw Funk Maharishi live at New Cross Inn",
-    "startDate": "2018-01-05T20:00",
-    "endDate": "2018-01-05T22:00",
-    "location": {
-      "@type": "Place",
-      "name": "New Cross Inn",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "United Kingdom",
-        "streetAddress": "New Cross Inn Hostel, 323A New Cross Rd, SE14"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "51.475746",
-        "longitude": "-0.03733"
-      }
+{
+  "@context": "http://schema.org",
+  "@type": "MusicEvent",
+  "name": "Raw Funk Maharishi live at New Cross Inn",
+  "description": "Raw Funk Maharishi live at New Cross Inn",
+  "startDate": "2018-01-05T20:00",
+  "endDate": "2018-01-05T22:00",
+  "location": {
+    "@type": "Place",
+    "name": "New Cross Inn",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "United Kingdom",
+      "streetAddress": "New Cross Inn Hostel, 323A New Cross Rd, SE14"
     },
-    "performer": [
-      {
-        "@type": "MusicGroup",
-        "name": "Raw Funk Maharishi",
-        "sameAs": "http://rawfunkmaharishi.uk/"
-      }
-    ],
-    "image": "http://rawfunkmaharishi.uk/assets/logos/social-image.png",
-    "offers": {
-      "priceCurrency": "GBP",
-      "price": "3",
-      "availability": "Pay on the door",
-      "url": "http://rawfunkmaharishi.uk/gigs/2018/01/05/new-cross-inn/",
-      "validFrom": "2018-01-05"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "51.475746",
+      "longitude": "-0.03733"
     }
+  },
+  "performer": {
+    "@type": "MusicGroup",
+    "name": "Raw Funk Maharishi",
+    "sameAs": "https://rawfunkmaharishi.uk/"
+  },
+  "image": "https://rawfunkmaharishi.uk/assets/logos/social-image.png",
+  "offers": {
+    "priceCurrency": "GBP",
+    "price": "3",
+    "availability": "Pay on the door",
+    "url": "https://rawfunkmaharishi.uk/gigs/2018/01/05/new-cross-inn/",
+    "validFrom": "2018-01-05"
   }
-]
+}

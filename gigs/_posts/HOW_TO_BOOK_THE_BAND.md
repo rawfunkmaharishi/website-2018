@@ -37,26 +37,46 @@ venue_website:
 
 And then I guess we negotiate in the PR discussion and merge when everybody's happy
 
-This will also embed some [JSON-LD](http://rawfunkmaharishi.uk/blog/2015/01/19/linking-data/) in the event page:
+This will also embed some [JSON-LD](https://rawfunkmaharishi.uk//blog/2015/01/19/linking-data/) in the event page:
 
 ```
 <script type="application/ld+json">
-[{
+{
   "@context" : "http://schema.org",
   "@type" : "MusicEvent",
-  "name" : "Raw Funk Maharishi live at The Comedy",
-  "startDate" : "2014-10-22 00:00:00 +0000T20:00",
+  "name" : "Raw Funk Maharishi live at Hoxton Underbelly",
+  "description" : "Raw Funk Maharishi live at Hoxton Underbelly",
+  "startDate" : "2017-01-31T20:30",
+  "endDate" : "2017-01-31T22:30",
   "location" : {
     "@type" : "Place",
-    "name" : "The Comedy",
-    "address" : "The Comedy, Oxendon St, SW1"
+    "name" : "Hoxton Underbelly",
+
+    "address" : {
+      "@type": "PostalAddress",
+      "addressCountry": "United Kingdom",
+      "streetAddress": "Zigfrid von Underbelly, 11 Hoxton Square, N1 6NU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "51.527817",
+      "longitude": "-0.08171"
+    }
   },
-  "performer" : [{
+  "performer" : {
     "@type" : "MusicGroup",
     "name" : "Raw Funk Maharishi",
-    "sameAs" : "http://rawfunkmaharishi.uk/"
-  }]
-}]
+    "sameAs" : "https://rawfunkmaharishi.uk/"
+  },
+  "image" : "https://rawfunkmaharishi.uk/assets/logos/social-image.png",
+  "offers" : {
+    "priceCurrency": "GBP",
+    "price": "0",
+    "availability": "Not relevant",
+    "url": "https://rawfunkmaharishi.uk/gigs/2017/01/31/hoxton-underbelly/",
+    "validFrom": "2017-01-31"
+  }
+}
 </script>
 ```
 

@@ -1,4 +1,4 @@
-A band site needs music, right? We have a load of tracks up on [SoundCloud](https://soundcloud.com/rawfunkmaharishi), and they make [embedding](http://rawfunkmaharishi.uk/sounds/) pretty easy. The default embeddable iframe is pretty bloody ugly, though:
+A band site needs music, right? We have a load of tracks up on [SoundCloud](https://soundcloud.com/rawfunkmaharishi), and they make [embedding]({{ site.url }}/sounds/) pretty easy. The default embeddable iframe is pretty bloody ugly, though:
 
     <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/174628735&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
@@ -31,7 +31,7 @@ According to [this page](https://developers.soundcloud.com/docs/oembed), _oEmbed
     </script>
 {% endraw %}
 
-and do you know what? IT ACTUALLY WORKED. Yes, I was as surprised as anyone. You can see it in action [here](http://rawfunkmaharishi.uk/oembed-sounds/).
+and do you know what? IT ACTUALLY WORKED. Yes, I was as surprised as anyone. You can see it in action [here]({{ site.url }}/oembed-sounds/).
 
 ## I do not think this word means what you think it means
 
@@ -85,4 +85,4 @@ and get back a nice embeddable iframe _which seems to work everywhere_. (Inciden
 
 ## Help yourself
 
-All of the code driving this site is [MIT Licensed](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/LICENSE.md), so as with the [OpenStreetMap embed](http://rawfunkmaharishi.uk/blog/2014/11/10/embedding-open-street-map/), please feel free to use this *_include* file in your own Jekyll sites (or help me make it redundant by showing me how I'm misunderstanding oEmbed!)
+All of the code driving this site is [MIT Licensed](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/LICENSE.md), so as with the [OpenStreetMap embed]({{ site.url }}/blog/2014/11/10/embedding-open-street-map/), please feel free to use this *_include* file in your own Jekyll sites (or help me make it redundant by showing me how I'm misunderstanding oEmbed!)

@@ -2,25 +2,47 @@ Due to working at the [Open Data Institute](http://theodi.org), I sometimes cros
 
 ## What does JSON-LD look like, then?
 
-In the source of [this gig page](http://rawfunkmaharishi.uk/gigs/2015/01/15/nambucca/), you will find the following chunk of JSON:
+In the source of [this gig page]({{ site.url }}/gigs/2015/01/15/nambucca/), you will find the following chunk of JSON:
 
 {% raw %}
     <script type="application/ld+json">
-    [{
+    {
       "@context" : "http://schema.org",
       "@type" : "MusicEvent",
       "name" : "Raw Funk Maharishi live at Nambucca",
+      "description" : "Raw Funk Maharishi live at Nambucca",
       "startDate" : "2015-01-15T20:00",
+      "endDate" : "2015-01-15T22:00",
       "location" : {
         "@type" : "Place",
         "name" : "Nambucca",
-        "address" : "596 Holloway Road, London, N7"
+
+        "address" : {
+          "@type": "PostalAddress",
+          "addressCountry": "United Kingdom",
+          "streetAddress": "596 Holloway Road, London, N7"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "51.56103",
+          "longitude": "-0.12366"
+        }
       },
-      "performer" : [{
+      "performer" : {
         "@type" : "MusicGroup",
         "name" : "Raw Funk Maharishi",
         "sameAs" : "http://rawfunkmaharishi.uk/"
-      }]
+      },
+      "image" : "http://rawfunkmaharishi.uk/assets/logos/social-image.png",
+      "offers" : {
+        "priceCurrency": "GBP",
+        "price": "6",
+        "availability": "Pay on the door",
+        "url": "http://rawfunkmaharishi.uk/gigs/2015/01/15/nambucca/",
+        "validFrom": "2015-01-15"
+      }
+    }
+</script>
     }]
     </script>
 {% endraw %}
@@ -46,7 +68,7 @@ This is a job for [yet another Jekyll *_include*](https://github.com/rawfunkmaha
         "performer" : [{
           "@type" : "MusicGroup",
           "name" : "Raw Funk Maharishi",
-          "sameAs" : "http://rawfunkmaharishi.uk/"
+          "sameAs" : "{{ site.url }}/"
       }]
     }]
     </script>
@@ -58,7 +80,7 @@ I guess one day this stuff will show up on the right-hand side of the page when 
 
 ## Certified Open Data
 
-Something else we've developed at the ODI is the [Open Data Certificate](https://certificates.theodi.org/), so of course I [got a certificate for this data](http://rawfunkmaharishi.uk/licensing/).
+Something else we've developed at the ODI is the [Open Data Certificate](https://certificates.theodi.org/), so of course I [got a certificate for this data]({{ site.url }}/licensing/).
 
 ## Help yourself
 

@@ -43,4 +43,4 @@ to make git leave that well alone. Probably a good time to commit:
 git init && git add . && git commit -m 'Committe the Fyrst'
 ```
 
-Now it's time to look at [hosting your site on Github](http://rawfunkmaharishi.uk/blog/2014/11/11/hosting-your-site-on-github/).
+Now it's time to look at [hosting your site on Github]({{ site.url }}/blog/2014/11/11/hosting-your-site-on-github/).

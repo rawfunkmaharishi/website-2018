@@ -24,14 +24,14 @@
   "performer" : {
     "@type" : "MusicGroup",
     "name" : "Raw Funk Maharishi",
-    "sameAs" : "http://rawfunkmaharishi.uk/"
+    "sameAs" : "{{ site.url }}/"
   },
-  "image" : "http://rawfunkmaharishi.uk/assets/logos/social-image.png",
+  "image" : "{{ site.url }}/assets/logos/social-image.png",
   "offers" : {
     "priceCurrency": "{{ currency }}",
     "price": "{{ price }}",
     "availability": "{{ availability }}",
-    "url": "{% if include.url %}{{ include.url }}{% else %}http://rawfunkmaharishi.uk{{ page.url }}{% endif %}",
+    "url": "{% if include.url %}{{ include.url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}",
     "validFrom": "{{ include.date | date: '%Y-%m-%d' }}"
   }
 }
