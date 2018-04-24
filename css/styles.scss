@@ -197,3 +197,11 @@ svg.logo {
     background: $brand-black;
   }
 }
+
+.album-details {
+  @extend .gig-details;
+}
+
+.album-cover {
+  margin-bottom: $padding * 2;
+}
