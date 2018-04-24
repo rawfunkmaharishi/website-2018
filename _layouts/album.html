@@ -2,43 +2,83 @@
 layout: default
 ---
 
-<h2>{{ page.release_date | date: '%B %Y' }}</h2>
-<p> Available on
+<div
+  class='row'
+  >
+  <div
+    class='col-sm'
+    >
+    <img
+      alt='{{ page.title }}'
+      class='album-cover'
+      src='/assets/album-covers/{{ page.cover_image }}'
+    />
+  </div>
+  <dl
+    class='col-sm row album-details'
+    >
+    <dt>
+      Released:
+    </dt>
+    <dd>
+      {{ page.release_date | date: '%B %Y' }}
+    </dd>
+    <dt>
+      Recorded at:
+    </dt>
+    <dd>
+      {{ page.location.name }}
+    </dd>
+    {% if page.producer %}
+      <dt>
+        Produced by:
+      </dt>
+      <dd>
+        {{ page.producer.name }}
+      </dd>
+    {% endif %}
+    <dt>
+      Tracks:
+    </dt>
+    <dd>
+      <ul
+        class='sub-list'
+        >
+        {% for track in page.tracks %}
+        <li>
+          {{ track }}
+        </li>
+        {% endfor %}
+      </ul>
+    </dd>
+  </dl>
+</div>
+
+<p>
+  Available on
   <a
-    data-target='#youtube-modal'
-    data-toggle='modal'
-    href='#'
-    ><i
-      class='music-service {{ site.data.attributes.music-services.youtube.font-awesome }}'
-      ></i>&nbsp;YouTube</a>,
+  data-target='#youtube-modal'
+  data-toggle='modal'
+  href='#'
+  ><i
+  class='music-service {{ site.data.attributes.music-services.youtube.font-awesome }}'
+  ></i>&nbsp;YouTube</a>,
   <a
-    data-toggle='modal'
-    data-target='#spotify-modal'
-    href='#'
-    ><i
-      class='music-service {{ site.data.attributes.music-services.spotify.font-awesome }}'
-      ></i>&nbsp;Spotify</a>,
+  data-toggle='modal'
+  data-target='#spotify-modal'
+  href='#'
+  ><i
+  class='music-service {{ site.data.attributes.music-services.spotify.font-awesome }}'
+  ></i>&nbsp;Spotify</a>,
   {% for outlet in page.outlets %}
-    <a
-      href='{{ outlet.url }}'
-      ><i
-        class='music-service {{ site.data.attributes.music-services[outlet.name].font-awesome }}'
-        ></i>&nbsp;{% assign words = outlet.name | split: '-' %}{% for word in words %}{{ word | capitalize }}{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}</a>,
+  <a
+  href='{{ outlet.url }}'
+  ><i
+  class='music-service {{ site.data.attributes.music-services[outlet.name].font-awesome }}'
+  ></i>&nbsp;{% assign words = outlet.name | split: '-' %}{% for word in words %}{{ word | capitalize }}{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}</a>,
   {% endfor %}
   iTunes, BitTorrent and elsewhere
 </p>
-
-<a
-  data-target='#{{ page.title }}-modal'
-  data-toggle='modal'
-  href='#'
-  >
-  <img
-    alt='{{ page.title }}'
-    src='/assets/album-covers/{{ page.cover_image }}'
-  />
-</a>
-
 {% capture yt-body %}
 <div
   class='embed-responsive embed-responsive-16by9'
