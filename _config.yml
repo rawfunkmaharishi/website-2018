@@ -21,8 +21,8 @@ defaults:
 - scope:
     type: posts
     path: blog
-
   values:
+    layout: blost
     priority: 100
 
 collections:
