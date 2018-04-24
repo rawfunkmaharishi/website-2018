@@ -11,13 +11,13 @@ $brand-complement: {{ site.data.attributes.colours.complement }};
 @import 'rfm/defaults/colours';
 @import 'rfm/defaults/fonts';
 
-@import 'rfm/modals';
 @import 'rfm/footer';
 @import 'rfm/banner';
 @import 'rfm/nav';
 @import 'rfm/assets';
 @import 'rfm/gigs';
 @import 'rfm/clickers';
+@import 'rfm/modals';
 
 body,
 .front-page-container {

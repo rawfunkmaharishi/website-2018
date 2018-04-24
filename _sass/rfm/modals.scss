@@ -10,10 +10,6 @@
   h2 {
     font-size: 1.2em;
   }
-
-  img {
-    border: 1px solid $brand-primary;
-  }
 }
 
 .modal-title {
@@ -31,7 +27,7 @@
   }
 }
 
-// .popover {
-//   background-color: $brand-black;
-//   color: $brand-primary;
-// }
+figcaption.image-credit-text {
+  bottom: $padding;
+  font-size: 0.8em;
+}

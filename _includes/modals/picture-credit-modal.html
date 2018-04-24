@@ -12,37 +12,33 @@
       class='modal-content'
       >
       <div
-        class='modal-header'
-        >
-        <h2
-          class='modal-title'
-          >Background image remixed from:
-          <br />
-          <a
-            href='{{ site.data.attributes.background-image.urls.photo }}'
-            >{{ site.data.attributes.background-image.title}}</a>
-          by
-          <a
-            href='{{ site.data.attributes.background-image.photographer.url }}'
-            >{{ site.data.attributes.background-image.photographer.name }}</a>
-          <br />
-          License:
-          <a
-            href='{{ site.data.licenses[site.data.attributes.background-image.license].url }}'
-            >{{ site.data.licenses[site.data.attributes.background-image.license].short-name }}</a>
-        </h2>
-      </div>
-      <div
         class='modal-body'
         >
-        <a
-          href='{{ site.data.attributes.background-image.urls.photo }}'
-          >
-          <img
-            alt='{{ site.data.attributes.background-image.title}}'
-            src='{{ site.data.attributes.background-image.urls.small }}'
-          />
-        </a>
+        <figure>
+          <a
+            href='{{ site.data.attributes.background-image.urls.photo }}'
+            >
+            <img
+              alt='{{ site.data.attributes.background-image.title}}'
+              src='{{ site.data.attributes.background-image.urls.small }}'
+            />
+          </a>
+          <figcaption
+            class='image-credit-text'
+            >Background image remixed from:
+            <a
+              href='{{ site.data.attributes.background-image.urls.photo }}'
+              >{{ site.data.attributes.background-image.title}}</a>
+            by
+            <a
+              href='{{ site.data.attributes.background-image.photographer.url }}'
+            >{{ site.data.attributes.background-image.photographer.name }}</a>
+            License:
+            <a
+              href='{{ site.data.licenses[site.data.attributes.background-image.license].url }}'
+            >{{ site.data.licenses[site.data.attributes.background-image.license].short-name }}</a>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </div>
