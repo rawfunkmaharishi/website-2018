@@ -4,5 +4,5 @@ time:          '20:00'
 latitude:      51.475746
 longitude:     -0.03733
 facebook_id:   1490692260999135
-price:         £3
+price:         3
 ---

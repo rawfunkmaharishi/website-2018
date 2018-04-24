@@ -1,0 +1,52 @@
+<div
+  class='clickable gig-clicker-container'
+  id='gig-clicker-container'
+  >
+  <a
+    data-target='#next-gig-modal'
+    data-toggle='modal'
+    href='#'
+    >
+    <i
+      class='fas fa-music animated faa-ring'
+      id='gig-clicker'
+      ></i>
+    </a>
+</div>
+
+{% include modals/next-gig-modal.html %}
+
+<script>
+function findGig() {
+  $.getJSON('/gigs.json', function(data) {
+    future = []
+    $.each(data.gigs, function(index, gig) {
+      if (isFuture(gig.date)) {
+        future.push(gig)
+      }
+    })
+    nextGig = (future[future.length - 1])
+
+    if (nextGig) {
+      $('#gig-clicker-container').show()
+      advertise(nextGig)
+    }
+  })
+}
+
+function advertise(gig) {
+  $('#next-gig').append(`
+      <span
+        class='gig-date'
+        >
+        ${ fancyDate(nextGig.date) }:
+      </span>
+      <a href='${ nextGig.url }'>
+        ${ nextGig.title }
+      </a>
+  `)
+}
+
+$('#gig-clicker-container').hide()
+findGig()
+</script>

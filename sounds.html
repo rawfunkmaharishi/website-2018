@@ -1,30 +1,33 @@
 ---
-title: Sounds
+title: Demos
 ---
 
-<p class='text-center'>
-  Our album releases are <a href='/albums'>here</a> (new EP coming soon!), or
-  check out these rehearsal recordings
-</p>
-
-<div class="row">
+<div
+  class='row'
+  >
   {% for track in site.data.soundcloud limit:3 %}
-    {% include sound.html
-      title = track.title
-      id = track.id
-      date = track.date
-      license = track.license
-      location = track.location %}
+    {%
+      include media/sound.html
+        date = track.date
+        id = track.id
+        license = track.license
+        location = track.location
+        title = track.title
+    %}
   {% endfor %}
 </div>
 
-<div class="row">
+<div
+  class='row'
+  >
   {% for track in site.data.soundcloud offset:3 limit:3 %}
-    {% include sound.html
-      title = track.title
-      id = track.id
-      date = track.date
-      license = track.license
-      location = track.location %}
+    {%
+      include media/sound.html
+        date = track.date
+        id = track.id
+        license = track.license
+        location = track.location
+        title = track.title
+    %}
   {% endfor %}
 </div>

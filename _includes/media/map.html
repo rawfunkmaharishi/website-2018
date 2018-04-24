@@ -1,0 +1,28 @@
+<div
+  class='map rounded'
+  id='map'
+  ></div>
+
+<script>
+    var map = L.map('map').setView(
+      [
+        {{ include.latitude }},
+        {{ include.longitude }}
+      ],
+      {{ site.data.attributes.map.zoom }}
+    );
+
+    {% include fragments/map-layers.js %}
+
+    L.marker(
+      [
+        {{ include.latitude }},
+        {{ include.longitude }}
+      ],
+      {icon: marker}
+    ).addTo(map).bindPopup(`
+      <span class='venue-name'>
+        {{ include.location | split: ',' | first }}
+      </span>`
+      ).openPopup()
+</script>

@@ -1,0 +1,107 @@
+.gig-lists,
+.next-gig {
+  text-align: center;
+  font-size: 1.1em;
+  @include media-breakpoint-down(xs) {
+    font-size: 0.9em;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .gig-date {
+    color: $brand-primary;
+  }
+
+  .card {
+    font-size: 0.9em;
+  }
+}
+
+.gig-archive {
+  font-size: 1em;
+  @include media-breakpoint-down(xs) {
+    font-size: 0.8em;
+  }
+}
+
+.gig-details {
+  font-size: 1em;
+  height: 100%;
+
+  dt {
+    @extend .col-4;
+    color: $brand-primary;
+    padding: 0;
+  }
+
+  dd {
+    @extend .col-8;
+    padding-left: $padding;
+  }
+}
+
+.map {
+  height: 300px;
+}
+
+.gig-map {
+  height: 400px;
+}
+
+.map,
+.gig-map {
+  .svg-inline--fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2em;
+    margin-top: 10px;
+    path {
+      fill: $link-color;
+    }
+  }
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  text-align: center;
+  background-color: $brand-black;
+  a {
+    color: $link-color;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+
+  .venue-name {
+    font-size: 1.2em;
+    color: $brand-primary;
+    display: block;
+  }
+}
+
+.leaflet-control {
+  text-align: right;
+  a {
+    background-color: $brand-black;
+    color: $link-color;
+  }
+
+  a:hover {
+    color: $link-hover;
+    text-decoration: none;
+  }
+}
+
+.gig-clicker-container {
+  position: fixed;
+  top: $padding;
+  left: $padding;
+}

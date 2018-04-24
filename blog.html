@@ -2,16 +2,24 @@
 title: Blog
 ---
 
-<dl class='blog-archive'>
+<dl
+  class='blog-archive'
+  >
   {% assign blosts = site.categories.blog | sort: 'priority' %}
   {% for blost in blosts %}
   <dt>
-    <a href='{{ blost.url }}'>{{ blost.title }}</a>
+    <a
+      href='{{ blost.url }}'
+      >{{ blost.title }}</a>
   </dt>
   <dd>
     {{ blost.excerpt | strip_html | truncate: 150, '...' }}
-    <span class='small'>
-      <a href='{{ include.url }}'>[read more]</a>
+    <span
+      class='small'
+      >
+      <a
+        href='{{ include.url }}'
+        >[read more]</a>
     </span>
   </dd>
   {% endfor %}

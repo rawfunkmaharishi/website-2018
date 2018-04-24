@@ -1,0 +1,40 @@
+<div
+  aria-hidden='true'
+  class='modal fade animated {{ site.data.attributes.modals.animation.in }}'
+  id='{{ include.name }}-modal'
+  role='dialog'
+  tabindex='-1'
+  >
+  <div
+    class='modal-dialog modal-dialog-centered'
+    >
+    <div
+      class='modal-content'
+      >
+      <div
+        class='modal-body merch-logo'
+        >
+        <img
+          alt='{{ include.name }}'
+          class='merch-image'
+          src='{{ include.path }}'
+        />
+      </div>
+      <div
+        class='modal-footer'
+        >
+        {% assign parts = path | split: '/' %}
+        {% capture dl_path %}{{ parts[-2] }}-{{ parts[-1] }}{% endcapture %}
+        <a
+          class='clickable'
+          download='{{ dl_path }}'
+          href='{{ include.path }}'
+          title='download'>
+          <i
+            class='fas fa-cloud-download-alt'
+            ></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

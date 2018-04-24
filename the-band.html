@@ -1,29 +1,31 @@
 ---
-title: The Band
+title: Band
 ---
-<div class="row">
+<div
+  class='row'
+  >
   {% for musician in site.data.band %}
-  <div class="col-lg photo musician">
+  <div
+    class='col-sm musician'
+    >
     <img
-      src='/assets/images/the-band/{{ musician.image }}'
       alt='{{ musician.name }}'
-      class='rounded mx-auto d-block'
-      data-toggle='tooltip'
-      data-html='true'
-      title='Photographer: {{ musician.photographer | capitalize }}<br />License: {{ site.data.licenses[musician.license].short-name }}'
+      src='/assets/images/the-band/{{ musician.image }}'
+      title='Photographer: {{ musician.photographer | capitalize }}, License: {{ site.data.licenses[musician.license].short-name }}'
     />
     {% capture name %}
-      <h2 class='musician-name'>{{ musician.name }}</h2>
+      <h2>{{ musician.name }}</h2>
     {% endcapture %}
     {% if musician.twitter %}
       <a
         href='//twitter.com/{{ musician.twitter }}'
-        title="{{ musician.name }}'s Twitter feed">
+        title='{{ musician.name }} on Twitter'>
         {{ name }}
       </a>
     {% else %}
       {{ name }}
     {% endif %}
+    <h3>{{ musician.instrument }}</h3>
   </div>
   {% endfor %}
 </div>

@@ -1,0 +1,34 @@
+<ul
+  class='footer'
+  >
+  {% for link in site.data.links %}
+    <li
+      class='list-inline-item'
+      >
+      <a
+        href='{{ link.url }}'
+        target='_blank'
+        title='{{ link.title }}'>
+        <i
+          class='fab {{ link.fontawesome }}'
+          title='{{ link.title }}'
+          ></i>
+      </a>
+    </li>
+  {% endfor %}
+  <li
+    class='list-inline-item'
+    >
+    <a
+      data-target='#background-credit-modal'
+      data-toggle='modal'
+      href='#'
+      >
+      <i
+        class='fas fa-image'
+        title='Image credit'></i>
+      </a>
+  </li>
+</ul>
+
+{% include modals/picture-credit-modal.html %}

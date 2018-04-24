@@ -2,35 +2,65 @@
 layout: default
 ---
 
-<div class='row'>
-  <dl class='row col-sm gig-details'>
+{% assign title = page.title %}
+{% assign date = page.date %}
+{% assign time = page.time %}
+
+{% assign location = page.location %}
+{% assign latitude = page.latitude %}
+{% assign longitude = page.longitude %}
+
+{% assign currency = 'GBP' %}
+{% if page.currency %}
+  {% assign currency = page.currency %}
+{% endif %}
+{% assign currency_symbol = site.data.attributes.currencies[currency] %}
+
+{% assign price = 0 %}
+{% assign availability = 'Not relevant' %}
+{% if page.price > 0 %}
+  {% assign price = page.price %}
+  {% assign availability = "Pay on the door" %}
+{% endif %}
+
+{% if page.venue_website %}
+  {% assign venue_url = page.venue_website.url %}
+{% endif %}
+
+<div
+  class='row'
+  >
+  <dl
+    class='row col-sm gig-details'
+    >
 
     <dt>Date:</dt>
-    <dd id='date'></dd>
+    <dd
+      id='date'>{{ date }}</dd>
 
     <dt>Time:</dt>
-    <dd>{{ page.time }}</dd>
+    <dd>{{ time }}</dd>
 
     <dt>Location:</dt>
-    <dd>{{ page.location | replace: ',', ',<br />' }}</dd>
+    <dd>{{ location | replace: ',', '<br />' }}</dd>
 
-    {% if page.price %}
-      <dt>Price</dt>
-      <dd>{{ page.price }}</dd>
+    {% if price > 0 %}
+      <dt>Price:</dt>
+      {% assign currency_symbol = site.data.attributes.currencies[currency] %}
+      <dd>{{ currency_symbol }}{{ price }}</dd>
     {% endif %}
 
     {% if page.other_bands %}
     <dt>With:</dt>
     <dd>
-      <ul class='other-bands'>
+      <ul
+        class='sub-list'
+        >
         {% for band in page.other_bands %}
-        <li>
-          <a
+        <li><a
             href='{{ band.url }}'
-            title='{{ band.name }}'>
-            {{ band.name }}
-          </a>
-        </li>
+            title='{{ band.name }}'
+            >{{ band.name }}</a></li>
         {% endfor %}
       </ul>
     </dd>
@@ -39,49 +69,53 @@ layout: default
   {% if page.facebook_id or page.venue_website %}
   <dt>More info:</dt>
   <dd>
-    <ul class='more-info'>
+    <ul
+      class='sub-list'
+      >
       {% if page.venue_website %}
-        <li>
-          <a
+        <li><a
             href='{{ page.venue_website.url }}'
-            title='More information'>
-            {{ page.venue_website.text }}
-          </a>
-        </li>
+            title='More information'
+            >{{ page.venue_website.text }}</a></li>
       {% endif %}
 
       {% if page.facebook_id  %}
-        <li>
-          <a
+        <li><a
             href='https://facebook.com/events/{{ page.facebook_id }}/'
-            title='Facebook event'>
-            Facebook
-          </a>
-        </li>
+            title='Facebook event'
+            >Facebook</a></li>
       {% endif %}
     </ul>
   </dd>
 {% endif %}
   </dl>
-  <div class='col-md'>
-    {% include map.html
-      latitude = page.latitude
-      longitude = page.longitude
-      title = page.title
-      location = page.location
+  <div
+    class='col-md'
+    >
+    {%
+      include media/map.html
+        latitude = latitude
+        location = location
+        longitude = longitude
+        title = title
+        show_larger = true
     %}
   </div>
 </div>
-{% include json-ld.html
-  title = page.title
-  date = page.date
-  time = page.time
-  location = page.location
-  price = page.price
-  url = page.venue_website.url
-  latitude = page.latitude
-  longitude = page.longitude
+
+{%
+  include fragments/json-ld-gig.html
+    currency = currency
+    date = date
+    latitude = latitude
+    location = location
+    longitude = longitude
+    price = price
+    title = title
+    time = time
+    url = venue_url
 %}
+
 <script>
   gigDate = '{{ page.date | date: "%Y-%m-%d" }}'
   $('#date').text(moment(gigDate).format('dddd Do MMMM YYYY'))

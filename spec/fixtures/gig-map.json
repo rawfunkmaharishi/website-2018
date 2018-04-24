@@ -1,0 +1,508 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.20714,
+          51.51892
+        ]
+      },
+      "properties": {
+        "name": "Acklam Village Market",
+        "gigs": [
+          {
+            "date": "2018-06-02 00:00:00 +0100",
+            "url": "/gigs/2018/06/02/acklam-village-market/"
+          },
+          {
+            "date": "2018-02-10 00:00:00 +0000",
+            "url": "/gigs/2018/02/10/acklam-village-market/"
+          },
+          {
+            "date": "2017-12-16 00:00:00 +0000",
+            "url": "/gigs/2017/12/16/acklam-village-market/"
+          },
+          {
+            "date": "2017-07-22 00:00:00 +0100",
+            "url": "/gigs/2017/07/22/acklam-village-market/"
+          },
+          {
+            "date": "2017-04-09 00:00:00 +0100",
+            "url": "/gigs/2017/04/09/acklam-village-market/"
+          },
+          {
+            "date": "2017-02-05 00:00:00 +0000",
+            "url": "/gigs/2017/02/05/acklam-village-market/"
+          },
+          {
+            "date": "2016-12-11 00:00:00 +0000",
+            "url": "/gigs/2016/12/11/acklam-village-market/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.08171,
+          51.527817
+        ]
+      },
+      "properties": {
+        "name": "Hoxton Underbelly",
+        "gigs": [
+          {
+            "date": "2018-05-01 00:00:00 +0100",
+            "url": "/gigs/2018/05/01/hoxton-underbelly/"
+          },
+          {
+            "date": "2018-02-12 00:00:00 +0000",
+            "url": "/gigs/2018/02/12/hoxton-underbelly/"
+          },
+          {
+            "date": "2017-11-28 00:00:00 +0000",
+            "url": "/gigs/2017/11/28/hoxton-underbelly/"
+          },
+          {
+            "date": "2017-09-05 00:00:00 +0100",
+            "url": "/gigs/2017/09/05/hoxton-underbelly/"
+          },
+          {
+            "date": "2017-08-14 00:00:00 +0100",
+            "url": "/gigs/2017/08/14/hoxton-underbelly/"
+          },
+          {
+            "date": "2017-03-06 00:00:00 +0000",
+            "url": "/gigs/2017/03/06/hoxton-underbelly/"
+          },
+          {
+            "date": "2017-01-31 00:00:00 +0000",
+            "url": "/gigs/2017/01/31/hoxton-underbelly/"
+          },
+          {
+            "date": "2016-10-24 00:00:00 +0100",
+            "url": "/gigs/2016/10/24/hoxton-underbelly/"
+          },
+          {
+            "date": "2016-05-24 00:00:00 +0100",
+            "url": "/gigs/2016/05/24/hoxton-underbelly/"
+          },
+          {
+            "date": "2016-02-15 00:00:00 +0000",
+            "url": "/gigs/2016/02/15/hoxton-underbelly/"
+          },
+          {
+            "date": "2015-11-23 00:00:00 +0000",
+            "url": "/gigs/2015/11/23/hoxton-underbelly/"
+          },
+          {
+            "date": "2015-10-27 00:00:00 +0000",
+            "url": "/gigs/2015/10/27/hoxton-underbelly/"
+          },
+          {
+            "date": "2015-08-11 00:00:00 +0100",
+            "url": "/gigs/2015/08/11/hoxton-underbelly/"
+          },
+          {
+            "date": "2015-02-17 00:00:00 +0000",
+            "url": "/gigs/2015/02/17/hoxton-underbelly/"
+          },
+          {
+            "date": "2014-06-16 00:00:00 +0100",
+            "url": "/gigs/2014/06/16/hoxton-underbelly/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.03733,
+          51.475746
+        ]
+      },
+      "properties": {
+        "name": "New Cross Inn",
+        "gigs": [
+          {
+            "date": "2018-01-05 00:00:00 +0000",
+            "url": "/gigs/2018/01/05/new-cross-inn/"
+          },
+          {
+            "date": "2017-08-18 00:00:00 +0100",
+            "url": "/gigs/2017/08/18/new-cross-inn/"
+          },
+          {
+            "date": "2015-07-03 00:00:00 +0100",
+            "url": "/gigs/2015/07/03/new-cross-inn/"
+          },
+          {
+            "date": "2015-03-20 00:00:00 +0000",
+            "url": "/gigs/2015/03/20/new-cross-inn/"
+          },
+          {
+            "date": "2014-05-16 00:00:00 +0100",
+            "url": "/gigs/2014/05/16/new-cross-inn/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.12929,
+          51.5152
+        ]
+      },
+      "properties": {
+        "name": "Alley Cat Bar",
+        "gigs": [
+          {
+            "date": "2017-09-29 00:00:00 +0100",
+            "url": "/gigs/2017/09/29/alley-cat-bar/"
+          },
+          {
+            "date": "2017-07-07 00:00:00 +0100",
+            "url": "/gigs/2017/07/07/alley-cat-bar/"
+          },
+          {
+            "date": "2017-06-20 00:00:00 +0100",
+            "url": "/gigs/2017/06/20/alley-cat-bar/"
+          },
+          {
+            "date": "2017-03-21 00:00:00 +0000",
+            "url": "/gigs/2017/03/21/alley-cat-bar/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.01593,
+          51.47965
+        ]
+      },
+      "properties": {
+        "name": "Parksfest Summer Sunday",
+        "gigs": [
+          {
+            "date": "2017-07-23 00:00:00 +0100",
+            "url": "/gigs/2017/07/23/parksfest-summer-sunday/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.10872,
+          51.53442
+        ]
+      },
+      "properties": {
+        "name": "The Islington",
+        "gigs": [
+          {
+            "date": "2017-07-18 00:00:00 +0100",
+            "url": "/gigs/2017/07/18/the-islington/"
+          },
+          {
+            "date": "2016-09-04 00:00:00 +0100",
+            "url": "/gigs/2016/09/04/the-islington/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.14376,
+          51.53955
+        ]
+      },
+      "properties": {
+        "name": "Camden Undersolo",
+        "gigs": [
+          {
+            "date": "2017-04-05 00:00:00 +0100",
+            "url": "/gigs/2017/04/05/camden-undersolo/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.08434,
+          51.52651
+        ]
+      },
+      "properties": {
+        "name": "The Workshop",
+        "gigs": [
+          {
+            "date": "2017-02-23 00:00:00 +0000",
+            "url": "/gigs/2017/02/23/the-workshop/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0794999,
+          51.5262023
+        ]
+      },
+      "properties": {
+        "name": "Bedroom Bar",
+        "gigs": [
+          {
+            "date": "2016-12-21 00:00:00 +0000",
+            "url": "/gigs/2016/12/21/bedroom-bar/"
+          },
+          {
+            "date": "2016-08-02 00:00:00 +0100",
+            "url": "/gigs/2016/08/02/bedroom-bar/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2586989,
+          51.5224867
+        ]
+      },
+      "properties": {
+        "name": "The Castle",
+        "gigs": [
+          {
+            "date": "2016-07-30 00:00:00 +0100",
+            "url": "/gigs/2016/07/30/the-castle/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0545754,
+          51.5473728
+        ]
+      },
+      "properties": {
+        "name": "Paper Vintage",
+        "gigs": [
+          {
+            "date": "2016-07-09 00:00:00 +0100",
+            "url": "/gigs/2016/07/09/paper-vintage/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.08066,
+          51.53635
+        ]
+      },
+      "properties": {
+        "name": "Stags Head",
+        "gigs": [
+          {
+            "date": "2016-04-25 00:00:00 +0100",
+            "url": "/gigs/2016/04/25/stags-head/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.07207,
+          51.52078
+        ]
+      },
+      "properties": {
+        "name": "Cafe 1001",
+        "gigs": [
+          {
+            "date": "2016-03-23 00:00:00 +0000",
+            "url": "/gigs/2016/03/23/cafe-1001/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.12366,
+          51.56103
+        ]
+      },
+      "properties": {
+        "name": "Nambucca",
+        "gigs": [
+          {
+            "date": "2015-12-21 00:00:00 +0000",
+            "url": "/gigs/2015/12/21/nambucca/"
+          },
+          {
+            "date": "2015-01-15 00:00:00 +0000",
+            "url": "/gigs/2015/01/15/nambucca/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.022509,
+          51.543772
+        ]
+      },
+      "properties": {
+        "name": "Grow Hackney",
+        "gigs": [
+          {
+            "date": "2015-11-05 00:00:00 +0000",
+            "url": "/gigs/2015/11/05/grow-hackney/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.13204,
+          51.50979
+        ]
+      },
+      "properties": {
+        "name": "The Comedy",
+        "gigs": [
+          {
+            "date": "2015-10-13 00:00:00 +0100",
+            "url": "/gigs/2015/10/13/the-comedy/"
+          },
+          {
+            "date": "2014-10-22 00:00:00 +0100",
+            "url": "/gigs/2014/10/22/the-comedy/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1355664,
+          51.5318874
+        ]
+      },
+      "properties": {
+        "name": "The Pack And Carriage",
+        "gigs": [
+          {
+            "date": "2015-09-04 00:00:00 +0100",
+            "url": "/gigs/2015/09/04/the-pack-and-carriage/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1032551,
+          51.5461216
+        ]
+      },
+      "properties": {
+        "name": "Buffalo Bar",
+        "gigs": [
+          {
+            "date": "2014-12-04 00:00:00 +0000",
+            "url": "/gigs/2014/12/04/buffalo-bar/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.129648,
+          51.430756
+        ]
+      },
+      "properties": {
+        "name": "The White Lion",
+        "gigs": [
+          {
+            "date": "2014-07-17 00:00:00 +0100",
+            "url": "/gigs/2014/07/17/the-white-lion/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.191681,
+          51.550594
+        ]
+      },
+      "properties": {
+        "name": "269 Bar",
+        "gigs": [
+          {
+            "date": "2013-12-05 00:00:00 +0000",
+            "url": "/gigs/2013/12/05/269-bar/"
+          }
+        ]
+      }
+    }
+  ]
+}

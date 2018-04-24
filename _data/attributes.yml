@@ -1,3 +1,7 @@
+colours:
+  primary: rgb(16, 181, 145)
+  complement: rgb(217, 95, 20)
+  
 straplines:
   - Bringing the weird grooves since 2013
   - “What Herbie Hancock would sound like if he was a 3-piece band”
@@ -9,14 +13,31 @@ map:
 
 background-image:
   urls:
-    photo:    //www.flickr.com/photos/95718647@N03/17053177571/
-    small:    //farm8.staticflickr.com/7678/17053177571_2bf083d608.jpg
-    fullsize: //farm8.staticflickr.com/7678/17053177571_c88eff4b85_k.jpg
-  title: Clouds
+    photo:    //unsplash.com/photos/jfkD2buRaxA
+    small:    /assets/backgrounds/bulbs.png
+    large:    /assets/backgrounds/bulbs-full.png
+    fullsize: //unsplash.com/photos/jfkD2buRaxA
+  title: The Lamps Off
   photographer:
-    name: timofticatalin
-    url:  https://www.flickr.com/photos/95718647@N03/
-  license: Attribution-2.0
+    name: Marcus Castro
+    url:  //unsplash.com/@marcuscastro
+  license: Unsplash License
 
 currencies:
-  £: GBP
+  GBP: £
+  EUR: €
+  USD: $
+
+music-services:
+  spotify:
+    font-awesome: fab fa-spotify
+  youtube:
+    font-awesome: fab fa-youtube
+  google-play:
+    font-awesome: fab fa-google-play
+  amazon:
+    font-awesome: fab fa-amazon
+
+modals:
+  animation:
+    in: fadeIn

@@ -1,0 +1,21 @@
+<div
+  aria-hidden='true'
+  class='modal fade animated {{ site.data.attributes.modals.animation.in }}'
+  id='{{ include.name }}-modal'
+  role='dialog'
+  tabindex='-1'
+  >
+  <div
+    class='modal-dialog modal-dialog-centered'
+    >
+    <div
+      class='modal-content'
+      >
+      <div
+        class='modal-body'
+        >
+        {{ include.body }}
+      </div>
+    </div>
+  </div>
+</div>

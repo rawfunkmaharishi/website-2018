@@ -1,0 +1,49 @@
+<div
+  aria-hidden='true'
+  class='modal fade animated {{ site.data.attributes.modals.animation.in }}'
+  id='background-credit-modal'
+  role='dialog'
+  tabindex='-1'
+  >
+  <div
+    class='modal-dialog modal-dialog-centered'
+    >
+    <div
+      class='modal-content'
+      >
+      <div
+        class='modal-header'
+        >
+        <h2
+          class='modal-title'
+          >Background image remixed from:
+          <br />
+          <a
+            href='{{ site.data.attributes.background-image.urls.photo }}'
+            >{{ site.data.attributes.background-image.title}}</a>
+          by
+          <a
+            href='{{ site.data.attributes.background-image.photographer.url }}'
+            >{{ site.data.attributes.background-image.photographer.name }}</a>
+          <br />
+          License:
+          <a
+            href='{{ site.data.licenses[site.data.attributes.background-image.license].url }}'
+            >{{ site.data.licenses[site.data.attributes.background-image.license].short-name }}</a>
+        </h2>
+      </div>
+      <div
+        class='modal-body'
+        >
+        <a
+          href='{{ site.data.attributes.background-image.urls.photo }}'
+          >
+          <img
+            alt='{{ site.data.attributes.background-image.title}}'
+            src='{{ site.data.attributes.background-image.urls.small }}'
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

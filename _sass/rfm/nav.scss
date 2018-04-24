@@ -1,0 +1,27 @@
+.nav {
+  text-align: right;
+  position: fixed;
+  top: $padding * 2;
+  right: $padding * 5;
+  color: $brand-primary;
+  text-transform: uppercase;
+  background-color: $brand-black;
+  opacity: $opacity;
+  padding-left: $padding;
+  padding-right: $padding;
+  z-index: 99;
+
+  @extend .rounded;
+
+  li {
+    a {
+      padding: 0;
+      margin: 0;
+    }
+    border-bottom: 1px dotted $link-color;
+  }
+
+  li:last-child {
+    border: none;
+  }
+}

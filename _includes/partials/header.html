@@ -1,0 +1,39 @@
+<head>
+  <meta
+    charset='utf-8'
+    />
+  <meta
+    content='IE=edge'
+    http-equiv='X-UA-Compatible'
+    />
+  <meta
+    content='width=device-width, initial-scale=1'
+    name='viewport'
+    />
+
+  {% include header/ie-cruft.html %}
+  {% include header/libs.html %}
+  {% include header/google-analytics.html %}
+  {% include header/social.html %}
+  {% include header/browser-colours.html %}
+  {% include header/favicons.html %}
+
+  <link
+    href='/css/styles.css'
+    rel='stylesheet'
+    />
+
+  {% if page.url == '/' or page.url == '/index-live/' %}
+    <style>
+      {% include assets/front-page.css %}
+      {% if page.no-background %}
+      body { background-image: none; }
+      {% endif %}
+    </style>
+  {% endif %}
+
+  <script
+    src='/js/rfm.js'></script>
+
+  <title>{{ page.title }}</title>
+</head>

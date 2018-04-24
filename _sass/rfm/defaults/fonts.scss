@@ -1,0 +1,30 @@
+body {
+  font-family: 'Roboto';
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  padding: $padding;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  color: $brand-primary;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  text-shadow: 0px 0px 2px $brand-black;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 0.8em;
+}
+
+.nav {
+  font-size: 1.5em;
+  letter-spacing: -2px;
+}

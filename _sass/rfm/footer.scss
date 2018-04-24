@@ -1,0 +1,25 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: $footer-height;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  padding: 0;
+  padding-top: $padding * 2;
+
+  text-align: center;
+
+  font-size: 0.7em;
+  margin: auto;
+
+  color: $brand-white;
+  height: $footer-height;
+}

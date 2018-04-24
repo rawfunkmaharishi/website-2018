@@ -1,0 +1,46 @@
+<div
+  aria-hidden='true'
+  class='modal fade animated {{ site.data.attributes.modals.animation.in }}'
+  id='calendar-subscribe-modal'
+  role='dialog'
+  tabindex='-1'
+  >
+  <div
+    class='modal-dialog modal-dialog-centered'
+    >
+    <div
+      class='modal-content'
+      >
+      <div
+        class='modal-body next-gig'
+        >
+        <h2>Subcribe to our gig calendar</h2>
+        <p>Copy the URL below and add it to your calendar</p>
+        <div
+          class='card'
+          data-content='Copied!'
+          data-placement='bottom'
+          data-toggle='popover'
+          id='calendar-url'
+          >{{ site.url }}/calendar.ics</div>
+        <a
+          data-clipboard-target='#calendar-url'
+          href='#'
+          id='url-copier'
+          >
+          <i
+            class='far fa-copy'
+            ></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+clipboard = new ClipboardJS('#url-copier')
+clipboard.on('success', function(e) {
+  $('#calendar-url').popover('show')
+  e.clearSelection();
+})
+</script>

@@ -1,0 +1,45 @@
+---
+layout:
+---
+
+{
+  "features": [
+{% assign venues = site.categories.gigs | map: 'title' | uniq %}
+
+{% for venue in venues %}
+  {% for gig in site.categories.gigs %}
+    {% if venue == gig.title %}
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            {{ gig.longitude }},
+            {{ gig.latitude }}
+          ]
+        },
+        "properties": {
+          "name": "{{ gig.title }}",
+          "gigs": [
+          {% assign gigslist = '' %}
+          {% for venuegig in site.categories.gigs %}
+            {% if venue == venuegig.title %}
+            {% capture thisgig %}
+              {
+                "date": "{{ venuegig.date }}",
+                "url": "{{ venuegig.url }}"
+              }
+            {% endcapture %}
+            {% assign gigslist = gigslist | append: thisgig | append: "|||" %}
+            {% endif %}
+          {% endfor %}
+          {{ gigslist | split: "|||" | join: ',' }}
+          ]
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+  ]
+}

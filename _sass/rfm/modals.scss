@@ -1,0 +1,37 @@
+.modal-header,
+.modal-footer {
+  border: 0;
+}
+
+.modal-content {
+  background-color: $brand-black;
+  border: 1px solid $brand-primary;
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  img {
+    border: 1px solid $brand-primary;
+  }
+}
+
+.modal-title {
+  margin: 0 auto;
+}
+
+.modal {
+  .card {
+    background-color: $brand-black;
+    // border: 1px solid $brand-primary;
+    color: $brand-primary;
+    display: inline;
+    padding: $padding;
+    font-weight: 600;
+  }
+}
+
+// .popover {
+//   background-color: $brand-black;
+//   color: $brand-primary;
+// }
