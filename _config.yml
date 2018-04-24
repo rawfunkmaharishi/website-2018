@@ -32,7 +32,7 @@ collections:
 permalink: pretty
 future: true
 
-url: http://rawfunkmaharishi.uk
+url: https://rawfunkmaharishi.uk
 exclude:
   - scripts
   - spec

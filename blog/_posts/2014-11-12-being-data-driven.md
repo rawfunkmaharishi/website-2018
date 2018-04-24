@@ -30,7 +30,7 @@ Those titles, URLs and [font-awesome](http://fortawesome.github.io/Font-Awesome/
     {% endfor %}
 {% endraw %}
 
-Building a footer or a navigation bar this way is all very well, but what about entirely data-driven blog posts? Well, those [sets of three dashes](http://rawfunkmaharishi.uk/blog/2014/11/11/getting-started-with-jekyll/#create-some-content) that we have at the top of each content page are delimiters for [Jekyll front matter](http://jekyllrb.com/docs/frontmatter/), where we normally specify things like titles and layouts. However, it's just YAML, and we can put anything we want in there. Which led me to the idea of
+Building a footer or a navigation bar this way is all very well, but what about entirely data-driven blog posts? Well, those [sets of three dashes]({{ site.url }}/blog/2014/11/11/getting-started-with-jekyll/#create-some-content) that we have at the top of each content page are delimiters for [Jekyll front matter](http://jekyllrb.com/docs/frontmatter/), where we normally specify things like titles and layouts. However, it's just YAML, and we can put anything we want in there. Which led me to the idea of
 
 ## Data-driven gigs
 
@@ -76,7 +76,7 @@ which has access to those items via _page.location_, etc:
     </dl>
 {% endraw %}
 
-and of course _page.latitude_ and _page.longitude_ with which it [renders an OSM map](http://rawfunkmaharishi.uk/blog/2014/11/10/embedding-open-street-map/).
+and of course _page.latitude_ and _page.longitude_ with which it [renders an OSM map]({{ site.url }}/blog/2014/11/10/embedding-open-street-map/).
 
 This data is also exposed as _site.categories.gigs_ - the hash key there is the directory under which our *_posts* appear, we also have _site.categories.blog_ on this site, as well as all *_posts* as _site.posts_ - which we can [iterate through to construct an archive page](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/gigs.html#L22-L32).
 

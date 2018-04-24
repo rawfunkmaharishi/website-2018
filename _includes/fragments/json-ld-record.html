@@ -3,8 +3,8 @@
   "@context" : "http://schema.org",
   "@type" : "MusicAlbum",
   "name": "{{ page.title }}",
-  "sameAs": "http://rawfunkmaharishi.uk/albums/{{ page.title | slugify }}",
-  "image": "http://rawfunkmaharishi.uk/assets/album-covers/{{ page.cover_image }}",
+  "sameAs": "{{ site.url }}/albums/{{ page.title | slugify }}",
+  "image": "{{ site.url }}/assets/album-covers/{{ page.cover_image }}",
   "albumProductionType": "Studio Recording",
   "albumReleaseType": "{{ page.type }}",
   "datePublished": "{{ page.date }}",
@@ -21,7 +21,7 @@
   "byArtist": {
     "@type" : "MusicGroup",
     "name" : "Raw Funk Maharishi",
-    "sameAs" : "http://rawfunkmaharishi.uk/"
+    "sameAs" : "{{ site.url }}/"
   },
   "numTracks" : {{ page.tracks.size }},
   "track": [
