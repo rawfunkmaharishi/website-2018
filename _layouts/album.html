@@ -27,7 +27,11 @@ layout: default
       Recorded at:
     </dt>
     <dd>
-      {{ page.location.name }}
+      <a
+        href='{{ page.location.url }}'
+        >
+        {{ page.location.name }}
+      </a>
     </dd>
     {% if page.producer %}
       <dt>
