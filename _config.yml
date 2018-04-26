@@ -31,10 +31,9 @@ collections:
 
 permalink: pretty
 future: true
-
 url: https://rawfunkmaharishi.uk
 exclude:
-  - scripts
   - spec
+  - vendor
 include:
   - .well-known
