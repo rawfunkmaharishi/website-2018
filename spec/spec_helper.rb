@@ -17,7 +17,7 @@ class JSONMunger
 
   def initialize path
     @expected = JSON.parse(File.read "spec/fixtures/json-ld#{path}.json")
-    fixture = File.readlines "_site#{path}/index.html"
+    fixture = File.readlines "spec/_site#{path}/index.html"
     buffer = []
     i = fixture.index { |line| line =~ /json/ } + 1
 
