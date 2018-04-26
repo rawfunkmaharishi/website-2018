@@ -105,3 +105,7 @@
   top: $padding;
   left: $padding;
 }
+
+.vector-marker > svg > path {
+  fill: $brand-primary;
+}

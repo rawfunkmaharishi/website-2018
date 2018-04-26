@@ -30,7 +30,6 @@ L.tileLayer('//stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.{ext}'
 }).addTo(map)
 
 var marker = L.VectorMarkers.icon({
-  markerColor: '{{ site.data.attributes.colours.primary }}',
   prefix: 'fa',
   extraClasses: 'fas',
   icon: 'music'
