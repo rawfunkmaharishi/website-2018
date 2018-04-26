@@ -57,4 +57,4 @@ namespace :validate do
   end
 end
 
-task :default => [:build, :spec, :proof, 'validate:html']
+task :default => [:build, :proof, 'validate:html']
