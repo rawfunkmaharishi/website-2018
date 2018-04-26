@@ -165,7 +165,17 @@ a:focus {
 }
 
 .album-details {
-  @extend .gig-details;
+  height: 100%;
+
+  dt {
+    @extend .col-6;
+    color: $brand-primary;
+    padding: 0;
+  }
+  dd {
+    padding-left: $padding;
+    @extend .col-6;
+  }
 }
 
 .album-cover {
