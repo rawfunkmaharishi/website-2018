@@ -18,13 +18,13 @@
         <p>Copy the URL below and add it to your calendar</p>
         <div
           class='card'
-          data-content='Copied!'
-          data-placement='bottom'
-          data-toggle='popover'
           id='calendar-url'
           >{{ site.url }}/calendar.ics</div>
         <a
           data-clipboard-target='#calendar-url'
+          data-content='Copied!'
+          data-placement='bottom'
+          data-toggle='popover'
           href='#'
           id='url-copier'
           >
@@ -40,7 +40,7 @@
 <script>
 clipboard = new ClipboardJS('#url-copier')
 clipboard.on('success', function(e) {
-  $('#calendar-url').popover('show')
+  $('#url-copier').popover('show')
   e.clearSelection();
 })
 </script>
