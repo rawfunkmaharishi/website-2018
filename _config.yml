@@ -11,12 +11,25 @@ defaults:
     path: gigs
   values:
     layout: gig
-    priority: 100
+    pretitle: |
+      <a
+        href='/gigs'
+        >
+        Gigs
+      </a>
+      »
 
 - scope:
     type: albums
   values:
     layout: album
+    pretitle: |
+      <a
+        href='/albums'
+        >
+        Albums
+      </a>
+      »
 
 - scope:
     type: posts
