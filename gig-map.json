@@ -27,7 +27,7 @@ layout:
             {% capture thisgig %}
               {
                 "date": "{{ venuegig.date }}",
-                "url": "{{ venuegig.url }}"
+                "url": "{{ site.url }}{{ venuegig.url }}"
               }
             {% endcapture %}
             {% assign gigslist = gigslist | append: thisgig | append: "|||" %}
