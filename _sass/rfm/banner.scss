@@ -9,37 +9,6 @@
   @include media-breakpoint-down(xs) {
     height: 300px;
   }
-
-  .logo {
-    position: absolute;
-    top: 55px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-
-    @include media-breakpoint-down(xs) {
-      top: 40px;
-    }
-
-    svg {
-      display: block;
-      width: 380px;
-      margin: auto;
-      @include media-breakpoint-down(xs) {
-        width: 250px;
-      }
-    }
-  }
-
-  path.artwork {
-    fill: $link-color;
-    opacity: $opacity;
-
-    &:hover {
-      fill: $link-hover;
-    }
-  }
 }
 
 h1 {

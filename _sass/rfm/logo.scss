@@ -1,0 +1,63 @@
+.header {
+  .logo {
+    position: absolute;
+    top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    @include media-breakpoint-down(xs) {
+      top: 40px;
+    }
+
+    svg {
+      display: block;
+      width: 380px;
+      margin: auto;
+      @include media-breakpoint-down(xs) {
+        width: 250px;
+      }
+    }
+  }
+}
+
+path.artwork {
+  fill: $link-color;
+  opacity: $opacity;
+  transition: fill $hover-transition-time $hover-transition-type;
+  cursor: pointer;
+
+  &:hover {
+    fill: $link-hover;
+  }
+}
+
+svg.logo {
+  path {
+    opacity: $opacity;
+    fill: $brand-white;
+  }
+
+  path:hover {
+    opacity: $opacity * 0.5;
+  }
+}
+
+.big-logo {
+  height: 100%;
+  display: flex;
+  svg {
+    display: block;
+    margin: auto;
+    width: 70%;
+
+    path.artwork {
+      &:hover {
+        @include media-breakpoint-down(xs) {
+          fill: $link-color;
+        }
+      }
+    }
+  }
+}

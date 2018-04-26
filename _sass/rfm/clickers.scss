@@ -3,6 +3,7 @@
   cursor: pointer;
   color: $link-color;
   z-index: 99;
+  transition: color $hover-transition-time $hover-transition-type;
 }
 
 .clickable:hover {

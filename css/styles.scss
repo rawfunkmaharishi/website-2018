@@ -11,6 +11,7 @@ $brand-complement: {{ site.data.attributes.colours.complement }};
 @import 'rfm/defaults/colours';
 @import 'rfm/defaults/fonts';
 
+@import 'rfm/logo';
 @import 'rfm/footer';
 @import 'rfm/banner';
 @import 'rfm/nav';
@@ -29,7 +30,6 @@ body {
   background-color: $brand-black;
   text-transform: lowercase;
   opacity: 1;
-  // transition: 0.5s opacity;
   transition: all .6s ease-in-out;
 }
 
@@ -37,7 +37,6 @@ body.page-fade {
   opacity: 0;
   transition: none;
 }
-
 
 hr {
   border-color: $brand-primary;
@@ -60,6 +59,7 @@ dt {
 
 a {
   color: $link-color;
+  transition: color $hover-transition-time $hover-transition-type;
 }
 
 a:hover {
@@ -70,17 +70,6 @@ a:hover {
 a:active,
 a:focus {
    outline: none;
-}
-
-svg.logo {
-  path {
-    opacity: $opacity;
-    fill: $brand-white;
-  }
-
-  path:hover {
-    opacity: $opacity * 0.5;
-  }
 }
 
 .reviews {
@@ -143,29 +132,6 @@ svg.logo {
 
   dd:last-child {
     border: none;
-  }
-}
-
-.big-logo {
-  height: 100%;
-  display: flex;
-  svg {
-    display: block;
-    margin: auto;
-    width: 70%;
-  }
-
-  path.artwork {
-    fill: $link-color;
-    opacity: $opacity;
-    cursor: pointer;
-
-    &:hover {
-      fill: $link-hover;
-      @include media-breakpoint-down(xs) {
-        fill: $link-color;
-      }
-    }
   }
 }
 
