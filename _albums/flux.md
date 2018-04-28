@@ -15,13 +15,13 @@ tracks:
   - Flux
   - Noble
   - Tree Deliveries
-  - Ceramic dragon
-  - Fade zero
-spotify_id: 5GoS0MKtTna4X90fStHjvh
-youtube_id: PL_-_2KA93U6SIE2rJJbUlIwRhpns9G_rg
+  - Ceramic Dragon
+  - Fade Zero
+spotify_id: 0V93nqs6M6JNtHE0OJvvgY
+youtube_id: PLuPLM2FI60-OlLoRt_FsbRFmi6v5wXKm9
 outlets:
   - name: google-play
-    url: https://play.google.com/store/music/album/Raw_Funk_Maharishi_Takatsuka?id=B2ednais3bcu3ua7cymck4wrxm4
+    url: //play.google.com/store/music/album/Raw_Funk_Maharishi_Flux?id=By22z4fv42lk6nbhlefsou66toy&hl=en_GB
   - name: amazon
-    url: https://www.amazon.co.uk/gp/product/B01CH4A5ZG
+    url: //www.amazon.co.uk/Flux-Raw-Funk-Maharishi/dp/B07CG3PG84/
 ---
