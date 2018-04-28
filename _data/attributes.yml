@@ -39,6 +39,8 @@ music-services:
     font-awesome: fab fa-amazon
   itunes:
     font-awesome: fab fa-apple
+  deezer:
+    font-awesome: fas fa-music
 
 modals:
   animation:
