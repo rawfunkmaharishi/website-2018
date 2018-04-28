@@ -1,7 +1,7 @@
 colours:
   primary: rgb(16, 181, 145)
   complement: rgb(217, 95, 20)
-  
+
 straplines:
   - Bringing the weird grooves since 2013
   - “What Herbie Hancock would sound like if he was a 3-piece band”
@@ -37,6 +37,8 @@ music-services:
     font-awesome: fab fa-google-play
   amazon:
     font-awesome: fab fa-amazon
+  itunes:
+    font-awesome: fab fa-apple
 
 modals:
   animation:
