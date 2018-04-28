@@ -63,34 +63,57 @@ layout: default
         {% endfor %}
       </ul>
     </dd>
+    <dt>
+      Get it:
+    </dt>
+    <dd>
+      <ul
+        class='sub-list'
+        >
+        <li>
+          <a
+            data-target='#youtube-modal'
+            data-toggle='modal'
+            href='#'
+            >
+            <i
+              class='music-service {{ site.data.attributes.music-services.youtube.font-awesome }}'
+              ></i>
+            YouTube
+          </a>
+        </li>
+        <li>
+          <a
+            data-toggle='modal'
+            data-target='#spotify-modal'
+            href='#'
+            >
+            <i
+              class='music-service {{ site.data.attributes.music-services.spotify.font-awesome }}'
+              ></i>
+            Spotify
+          </a>
+        </li>
+        {% for outlet in page.outlets %}
+        <li>
+          <a
+            href='{{ outlet.url }}'
+            ><i
+              class='music-service {{ site.data.attributes.music-services[outlet.name].font-awesome }}'
+              ></i>
+            {% assign words = outlet.name | split: '-' %}
+            {% for word in words %}
+              {{ word | capitalize }}
+              {% unless forloop.last %} {% endunless %}
+            {% endfor %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </dd>
   </dl>
 </div>
 
-<p>
-  Available on
-  <a
-  data-target='#youtube-modal'
-  data-toggle='modal'
-  href='#'
-  ><i
-  class='music-service {{ site.data.attributes.music-services.youtube.font-awesome }}'
-  ></i>&nbsp;YouTube</a>,
-  <a
-  data-toggle='modal'
-  data-target='#spotify-modal'
-  href='#'
-  ><i
-  class='music-service {{ site.data.attributes.music-services.spotify.font-awesome }}'
-  ></i>&nbsp;Spotify</a>,
-  {% for outlet in page.outlets %}
-  <a
-  href='{{ outlet.url }}'
-  ><i
-  class='music-service {{ site.data.attributes.music-services[outlet.name].font-awesome }}'
-  ></i>&nbsp;{% assign words = outlet.name | split: '-' %}{% for word in words %}{{ word | capitalize }}{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}</a>,
-  {% endfor %}
-  iTunes, BitTorrent and elsewhere
-</p>
 {% capture yt-body %}
 <div
   class='embed-responsive embed-responsive-16by9'
