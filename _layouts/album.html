@@ -24,15 +24,67 @@ layout: default
       {{ page.release_date | date: '%B %Y' }}
     </dd>
     <dt>
-      Recorded at:
+      Get it:
     </dt>
     <dd>
-      <a
-        href='{{ page.location.url }}'
+      <ul
+      class='sub-list'
+      >
+      <li>
+        <a
+        data-target='#youtube-modal'
+        data-toggle='modal'
+        href='#'
         >
-        {{ page.location.name }}
+        <i
+        class='music-service {{ site.data.attributes.music-services.youtube.font-awesome }}'
+        ></i>
+        YouTube
       </a>
-    </dd>
+    </li>
+    <li>
+      <a
+      data-toggle='modal'
+      data-target='#spotify-modal'
+      href='#'
+      >
+      <i
+      class='music-service {{ site.data.attributes.music-services.spotify.font-awesome }}'
+      ></i>
+      Spotify
+    </a>
+  </li>
+  {% for outlet in page.outlets %}
+  <li>
+    <a
+    href='{{ outlet.url }}'
+    ><i
+    class='music-service {{ site.data.attributes.music-services[outlet.name].font-awesome }}'
+    ></i>
+    {% assign words = outlet.name | split: '-' %}
+    {% for word in words %}
+    {{ word | capitalize }}
+    {% unless forloop.last %} {% endunless %}
+    {% endfor %}
+  </a>
+</li>
+{% endfor %}
+</ul>
+</dd>
+<dt>
+  Tracks:
+</dt>
+<dd>
+  <ul
+  class='sub-list'
+  >
+  {% for track in page.tracks %}
+  <li>
+    {{ track }}
+  </li>
+  {% endfor %}
+</ul>
+</dd>
     {% if page.producer %}
       <dt>
         Produced by:
@@ -50,67 +102,15 @@ layout: default
       </dd>
     {% endif %}
     <dt>
-      Tracks:
+      Recorded at:
     </dt>
     <dd>
-      <ul
-        class='sub-list'
-        >
-        {% for track in page.tracks %}
-        <li>
-          {{ track }}
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
-    <dt>
-      Get it:
-    </dt>
-    <dd>
-      <ul
-        class='sub-list'
-        >
-        <li>
-          <a
-            data-target='#youtube-modal'
-            data-toggle='modal'
-            href='#'
-            >
-            <i
-              class='music-service {{ site.data.attributes.music-services.youtube.font-awesome }}'
-              ></i>
-            YouTube
-          </a>
-        </li>
-        <li>
-          <a
-            data-toggle='modal'
-            data-target='#spotify-modal'
-            href='#'
-            >
-            <i
-              class='music-service {{ site.data.attributes.music-services.spotify.font-awesome }}'
-              ></i>
-            Spotify
-          </a>
-        </li>
-        {% for outlet in page.outlets %}
-        <li>
-          <a
-            href='{{ outlet.url }}'
-            ><i
-              class='music-service {{ site.data.attributes.music-services[outlet.name].font-awesome }}'
-              ></i>
-            {% assign words = outlet.name | split: '-' %}
-            {% for word in words %}
-              {{ word | capitalize }}
-              {% unless forloop.last %} {% endunless %}
-            {% endfor %}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
+      <a
+      href='{{ page.location.url }}'
+      >
+      {{ page.location.name }}
+    </a>
+  </dd>
   </dl>
 </div>
 
