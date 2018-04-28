@@ -38,7 +38,15 @@ layout: default
         Produced by:
       </dt>
       <dd>
-        {{ page.producer.name }}
+        {% if page.producer.url %}
+        <a
+          href='{{ page.producer.url }}'
+          >
+        {% endif %}
+          {{ page.producer.name }}
+        {% if page.producer.url %}
+        </a>
+        {% endif %}
       </dd>
     {% endif %}
     <dt>
