@@ -41,7 +41,7 @@ function advertise(gig) {
         >
         ${ fancyDate(nextGig.date) }:
       </span>
-      <a href='${ nextGig.url }'>
+      <a href='${ nextGig.url.split('{{ site.url }}')[1] }'>
         ${ nextGig.title }
       </a>
   `)

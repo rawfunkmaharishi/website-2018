@@ -49,7 +49,7 @@ $.getJSON('/gigs.json', function(data) {
         class='gig-date'
         >${ date }:</span>
       <a
-        href='${ gig.url }'
+        href='${ gig.url.split('{{ site.url }}')[1] }'
         title='${ gig.title }, ${ date }'
         >
           ${ gig.title }
