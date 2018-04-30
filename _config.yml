@@ -11,25 +11,17 @@ defaults:
     path: gigs
   values:
     layout: gig
-    pretitle: |
-      <a
-        href='/gigs'
-        >
-        Gigs
-      </a>
-      »
+    pretitle:
+      url:  /gigs
+      text: Gigs
 
 - scope:
     type: albums
   values:
     layout: album
-    pretitle: |
-      <a
-        href='/albums'
-        >
-        Albums
-      </a>
-      »
+    pretitle:
+      url:  /albums
+      text: Albums
 
 - scope:
     type: posts

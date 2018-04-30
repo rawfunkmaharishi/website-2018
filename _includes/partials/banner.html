@@ -14,7 +14,13 @@
     </div>
 
     <h1>
-      {% if page.pretitle %}{{ page.pretitle }}{% endif %}
+      {% if page.pretitle %}
+        <a
+          href='{{ page.pretitle.url }}'
+          >
+          {{ page.pretitle.text }}
+        </a> »
+      {% endif %}
       {{ page.title }}
       {% if page.subtitle %}<small>{{ page.subtitle }}</small>{% endif %}
     </h1>

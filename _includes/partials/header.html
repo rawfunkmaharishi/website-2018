@@ -35,5 +35,9 @@
   <script
     src='/js/rfm.js'></script>
 
-  <title>{{ page.title }}</title>
+  <title>{% if page.pretitle %}
+  {{ page.pretitle.text }}
+  »
+  {% endif %}
+  {{ page.title }}</title>
 </head>
