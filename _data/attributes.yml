@@ -40,7 +40,7 @@ music-services:
   itunes:
     font-awesome: fab fa-apple
   deezer:
-    font-awesome: fas fa-music
+    font-awesome: fas fa-align-left fa-rotate-270
 
 modals:
   animation:
