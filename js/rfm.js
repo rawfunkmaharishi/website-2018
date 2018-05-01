@@ -1,5 +1,5 @@
 function isFuture(date) {
-  return moment().isBefore(date)
+  return moment().isBefore(date + 1)
 }
 
 function fancyDate(isoDate) {
