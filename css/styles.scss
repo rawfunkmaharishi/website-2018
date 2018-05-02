@@ -1,6 +1,8 @@
 ---
 ---
 
+@import url(//fonts.googleapis.com/css?family={{ site.data.attributes.font.name }}:{{ site.data.attributes.font.weight }});
+$font: {{ site.data.attributes.font.name }};
 $background: url({{ site.data.attributes.background-image.urls.small }});
 $brand-primary: {{ site.data.attributes.colours.primary }};
 $brand-complement: {{ site.data.attributes.colours.complement }};

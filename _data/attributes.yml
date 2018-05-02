@@ -2,6 +2,10 @@ colours:
   primary: rgb(16, 181, 145)
   complement: rgb(217, 95, 20)
 
+font:
+  name: Roboto
+  weight: 100
+
 straplines:
   - Bringing the weird grooves since 2013
   - “What Herbie Hancock would sound like if he was a 3-piece band”
