@@ -33,11 +33,3 @@ css:
     url:  //cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css
   - name: fontawesome animation
     url:  //cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.1.0/font-awesome-animation.min.css
-
-fonts:
-  - name: ubuntu
-    url:  //fonts.googleapis.com/css?family=Roboto:100
-  - name: open sans 300
-    url:  //fonts.googleapis.com/css?family=Open+Sans:300
-  - name: open sans 600
-    url:  //fonts.googleapis.com/css?family=Open+Sans:600
