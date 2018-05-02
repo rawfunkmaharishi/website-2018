@@ -95,6 +95,7 @@ a:focus {
   background-color: $dark-grey;
   padding: $padding;
   margin: $padding;
+  transition: background-color $hover-transition-time $hover-transition-type;
 
   &:hover {
     background-color: $link-hover;
