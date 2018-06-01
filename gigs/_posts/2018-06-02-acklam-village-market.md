@@ -3,6 +3,7 @@ location:     Acklam Village Market (Portobello Road), 4-8 Acklam Road, London W
 time:        '17:00'
 latitude:    51.51892
 longitude:   -0.20714
+facebook_id: 1247921898672210
 venue_website:
   url:  http://acklamvillage.com/
   text: Acklam Village
