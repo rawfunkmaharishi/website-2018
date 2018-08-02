@@ -45,6 +45,8 @@ music-services:
     font-awesome: fab fa-apple
   deezer:
     font-awesome: fas fa-align-left fa-rotate-270
+  napster:
+    font-awesome: fab fa-napster
 
 modals:
   animation:
