@@ -11,7 +11,7 @@ other_bands:
   - name: Nat and the Noise Brigade
     url:  //natandthenoisebrigade.bandcamp.com
   - name: Wax Machine
-    url:  //waxmachine.bandcamp.com
+    url:  //soundcloud.com/waxmachine
   - name: Rokurokubi
     url:  //rokurokubi.bandcamp.com
 ---
