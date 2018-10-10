@@ -4,4 +4,14 @@ time:        '21:00'
 latitude:    51.5473728
 longitude:   -0.0545754
 facebook_id: 340394216534106
+venue_website:
+  url:  //paperdressvintage.co.uk
+  text: Paper Dress Vintage
+other_bands:
+  - name: Nat and the Noise Brigade
+    url:  //natandthenoisebrigade.bandcamp.com
+  - name: Wax Machine
+    url:  //waxmachine.bandcamp.com
+  - name: Rokurokubi
+    url:  //rokurokubi.bandcamp.com
 ---
