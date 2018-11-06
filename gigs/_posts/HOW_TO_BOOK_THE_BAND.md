@@ -15,6 +15,7 @@ latitude:    {where in the world}
 longitude:   {is your place located?}
 
 # optional fields
+title:       {if different from the URL-derived one}
 price:       {just an amount}
 currency:    {three-letter representation, but only if anything other than GBP}
 facebook_id: {if you have an FB event}
