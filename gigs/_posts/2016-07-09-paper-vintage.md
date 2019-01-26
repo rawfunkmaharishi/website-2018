@@ -1,5 +1,5 @@
 ---
-location:    Paper Dress Vintage
+title:       Paper Dress Vintage
 location:    Paper Dress Vintage, 352a Mare Street, London E8 1HR
 time:        '21:00'
 latitude:    51.5473728
