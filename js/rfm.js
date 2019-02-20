@@ -14,7 +14,7 @@ function opacify(element) {
   start = height - initialTop
   pos = height - $(element)[0].getBoundingClientRect().bottom
   // opacity = Math.sin((pos / start) * (Math.PI / 2))
-  opacity = pos / start
+  opacity = (pos / start) * 2
 
   if (1 > opacity > 0) {
     element.css('opacity', opacity)

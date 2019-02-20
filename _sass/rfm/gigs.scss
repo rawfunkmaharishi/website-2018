@@ -108,3 +108,23 @@
 .vector-marker > svg > path {
   fill: $brand-primary;
 }
+
+a {
+  .show-ctrl, .hide-ctrl {
+    font-size: 0.5em;
+  }
+  .show-ctrl {
+    display: none;
+  }
+  .hide-ctrl {
+    display: inline;
+  }
+  &.collapsed {
+    .show-ctrl{
+      display: inline;
+    }
+    .hide-ctrl {
+      display: none;
+    }
+  }
+}
