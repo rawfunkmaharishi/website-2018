@@ -28,6 +28,4 @@ outlets:
     url: //play.google.com/store/music/album/Raw_Funk_Maharishi_Flux?id=By22z4fv42lk6nbhlefsou66toy&hl=en_GB
   - name: amazon
     url: //www.amazon.co.uk/Flux-Raw-Funk-Maharishi/dp/B07CG3PG84/
-  - name: napster 
-    url:  //gb.napster.com/artist/raw-funk-maharishi/album/flux
 ---
