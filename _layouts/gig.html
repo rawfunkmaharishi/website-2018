@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 {% assign title = page.title %}
 {% assign date = page.date %}
 {% assign time = page.time %}
@@ -27,13 +28,18 @@ layout: default
   {% assign venue_url = page.venue_website.url %}
 {% endif %}
 
+{% if page.covid  %}
+  <span class="covid">
+    Covid
+  </span>
+{% endif %}
+
 <div
   class='row'
   >
   <dl
     class='row col-sm gig-details'
     >
-
     <dt>Date:</dt>
     <dd
       id='date'>{{ date }}</dd>
