@@ -111,6 +111,22 @@ layout: default
       {{ page.location.name }}
     </a>
   </dd>
+  {% if page.mixer %}
+  <dt>
+    Remixed by:
+  </dt>
+  <dd>
+    {% if page.mixer.url %}
+    <a
+      href='{{ page.mixer.url }}'
+      >
+    {% endif %}
+      {{ page.mixer.name }}
+    {% if page.mixer.url %}
+    </a>
+    {% endif %}
+  </dd>
+{% endif %}
   </dl>
 </div>
 

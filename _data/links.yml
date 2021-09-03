@@ -2,9 +2,9 @@
   url:         //www.instagram.com/rawfunkmaharishi_/
   fontawesome: fa-instagram
 
-- title:       Twitter
-  url:         //twitter.com/uncookedfunk
-  fontawesome: fa-twitter
+# - title:       Twitter
+#   url:         //twitter.com/uncookedfunk
+#   fontawesome: fa-twitter
 
 - title:       Facebook
   url:         //facebook.com/rawfunkmaharishi
@@ -14,9 +14,9 @@
   url:         //soundcloud.com/rawfunkmaharishi
   fontawesome: fa-soundcloud
 
-- title:       Vimeo
-  url:         //vimeo.com/rawfunkmaharishi
-  fontawesome: fa-vimeo-square
+# - title:       Vimeo
+#   url:         //vimeo.com/rawfunkmaharishi
+#   fontawesome: fa-vimeo-square
 
 - title:       Flickr
   url:         //flickr.com/photos/rawfunkmaharishi/

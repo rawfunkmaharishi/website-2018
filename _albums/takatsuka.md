@@ -18,12 +18,8 @@ tracks:
 spotify_id: 5GoS0MKtTna4X90fStHjvh
 youtube_id: PL_-_2KA93U6SIE2rJJbUlIwRhpns9G_rg
 outlets:
-  - name: itunes
-    url:  //itunes.apple.com/us/album/takatsuka/1089162061
-  - name: deezer
-    url:  //www.deezer.com/en/album/12532182
-  - name: google-play
-    url:  //play.google.com/store/music/album/Raw_Funk_Maharishi_Takatsuka?id=B2ednais3bcu3ua7cymck4wrxm4
+  - name: apple music
+    url:  //music.apple.com/us/album/takatsuka/1089162061
   - name: amazon
     url:  //www.amazon.co.uk/gp/product/B01CH4A5ZG
 ---

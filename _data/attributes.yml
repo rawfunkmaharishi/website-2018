@@ -41,7 +41,7 @@ music-services:
     font-awesome: fab fa-google-play
   amazon:
     font-awesome: fab fa-amazon
-  itunes:
+  apple music:
     font-awesome: fab fa-apple
   deezer:
     font-awesome: fas fa-align-left fa-rotate-270
