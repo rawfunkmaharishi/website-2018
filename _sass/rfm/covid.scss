@@ -1,0 +1,17 @@
+@import url(//fonts.googleapis.com/css?family=Stardos+Stencil:700);
+.covid {
+  font-family: "Stardos Stencil";
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.7);
+  text-align: center;
+  font-size: 8em;
+  font-weight: 700;
+  line-height: 3em;
+  position: absolute;
+  text-transform: uppercase;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 9999;
+}

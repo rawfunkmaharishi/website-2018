@@ -21,6 +21,7 @@ $brand-complement: {{ site.data.attributes.colours.complement }};
 @import 'rfm/gigs';
 @import 'rfm/clickers';
 @import 'rfm/modals';
+@import 'rfm/covid';
 
 body,
 .front-page-container {
